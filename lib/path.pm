@@ -9,7 +9,7 @@ our @patterns = (
 
 ) ;
 
-# for specifying interdependencies between files
+## for specifying interdependencies between files
 
 our %dependencies = (
     "/allura/sitemap.html" => [ grep s!^content!!, glob "content/allura/*.mdtext" ],

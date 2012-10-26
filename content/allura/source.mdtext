@@ -16,11 +16,12 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-INTRO TODO
 
 ## Getting the source code
 
-TODO
+The Allura source is available from the Apache Git server:
+
+<a href="git://git.apache.org/incubator-allura.git">git://git.apache.org/incubator-allura.git</a>
 
 ## Building and Running
 
@@ -29,4 +30,3 @@ TODO
 ### Requirements:
 
 TODO
-

@@ -23,6 +23,6 @@ to look at all contributors to our issue tracker, mailing list and version contr
 | Apache ID | Name                                      # {.w160}| Role |
 |----------|----------------------------------------------------|^------------------|
 | rbowen | Rich Bowen | Mentor |
-| TODO | | |
-
-The list of committers can be found [here](http://people.apache.org/committers-by-project.html#allura).
+| rgardler | Ross Gardler | Mentor |
+| gstein | Greg Stein | Mentor |
+| brondsem | Dave Brondsema | Committer |

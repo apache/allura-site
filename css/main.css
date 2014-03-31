@@ -71,26 +71,26 @@ body {
 }
 
 /* ===================
-    ALL: Orange Theme
+    ALL: Theme
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+    border-bottom: 20px solid #303284;
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #e44d26;
+    border-top: 20px solid #303284;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+    background: white;
 }
 
 .title {
-    color: white;
+    color: black;
 }
 
 /* ==============
@@ -137,12 +137,10 @@ nav a:hover {
 }
 
 .main aside {
-    color: white;
-    padding: 0px 5% 10px;
+    padding: 0px 3% 10px;
 }
 
 .footer-container footer {
-    color: white;
     padding: 20px 0;
 }
 
@@ -158,17 +156,25 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+li {
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+}
 
+/* no extra margins inside nested lists */
+li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
+header img.logo {
+    display: none;  /* mobile-first, overridden below */
+}
 
-
-
-
-
-
-
-
-
+header h3 {
+    clear: left;
+    font-weight: normal;
+}
 
 
 
@@ -177,6 +183,11 @@ nav a:hover {
    ========================================================================== */
 
 @media only screen and (min-width: 480px) {
+
+    header img.logo {
+        display: block;
+        float: right;
+    }
 
 /* ====================
     INTERMEDIATE: Menu

@@ -13,7 +13,11 @@ DEFAULT_LANG = 'en'
 PATH = 'content'
 OUTPUT_PATH = '../'
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = ["_src"]  # don't delete source files
+# don't delete source files
+OUTPUT_RETENTION = [
+    "_src",
+    "README.md",
+]
 STATIC_PATHS = [
     'extra/robots.txt',
     'extra/favicon.ico',

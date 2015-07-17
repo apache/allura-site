@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="about" class="row bg-white pad-vert-xl">
+  <div class="row">
+    <h3 class="text-black text-center">What is Allura?</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-20 no-float auto-margin">
+      <div class="row">
+        <p class="pad-md text-black">Apache Allura is an open source implementation of a software forge, a web site that manages source code repositories, bug reports, discussions, wiki pages, blogs, and more for any number of individual projects. Read about all of <a href="{{ FEATURES_URL }}">Allura's features</a> or <a href="{{ FEATURES_COMPARISON_URL }}">compare features to other OSS forge software</a>.<br><br>The Allura project is self-hosted on an instance of Allura:</p>
+      </div>
+
+      <div class="row">
+        <div class="col-8 pad-vert-sm">
+          <img class="icon" src="theme/img/ic-instance-github.png" height="187">
+          <a href="{{ GIT_URL }}"><button class="btn-orange auto-margin">Git</button></a>
+        </div>
+
+        <div class="col-8 pad-vert-sm">
+          <img class="icon" src="theme/img/ic-instance-wiki.png" height="187">
+          <a href="{{ WIKI_URL }}"><button class="btn-orange auto-margin">Wiki</button></a>
+        </div>
+
+        <div class="col-8 pad-vert-sm">
+          <img class="icon" src="theme/img/ic-instance-ticket.png" height="187">
+          <a href="{{ TICKETS_URL }}"><button class="btn-orange auto-margin">Tickets</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="download" class="row pad-vert-xl parallax" style="background-position: 0px 0px;">
+  <div class="col-16 no-float auto-margin">
+    <div class="row">
+      <h3 class="text-center">Get the Latest Version of Allura</h3>
+      <div class="row pad-vert-md">
+        <a href="http://www.apache.org/dyn/closer.cgi/allura/allura-{{ RELEASE_VERSION }}.tar.gz"><button class="auto-margin">Download v{{ RELEASE_VERSION }}</button></a>
+        <div class="col-24 auto-margin pad-vert-xs" style="max-width: 175px">
+          <span class="text-white">{{ RELEASE_DATE }}</span><span class="pull-right"><a href="{{ GIT_URL }}ci/asf_release_{{ RELEASE_VERSION }}/tree/CHANGES">Changelog</a></span>
+        </div>
+      </div>
+      <ul class="auto-margin bg-shadow pad-sm">
+        <li class="text-white"><a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.md5" class="text-white" download="">md5</a>, <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha1" class="text-white" download="">sha1</a>, <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha512" class="text-white" download="">sha512 sums</a></li>
+        <li class="text-white">PGP <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.asc" class="text-white" download="">signature</a> &amp; <a href="{{ DIST_URL }}KEYS" class="text-white" download="">keys</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <div class="row">
+      <div class="col-12 no-float auto-margin">
+      </div>
+      <div class="col-12 no-float auto-margin">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="resources" class="row bg-black pad-vert-xl">
+  <div class="row">
+    <h3 class="text-center">Resources</h3>
+    <div class="col-8 pad-vert-sm">
+      <img class="icon" src="theme/img/ic-resources-installation.png" alt="allura installation" height="187">
+      <a href="{{ GIT_URL }}ci/master/tree/INSTALL.markdown"><button class="auto-margin">Installation</button></a>
+      <p class="pad-top-sm text-center">Step-by-step installation guide</p>
+    </div>
+
+    <div class="col-8 pad-vert-sm">
+      <img class="icon" src="theme/img/ic-resources-quickstart.png" alt="allura quick start" height="187">
+      <a href="{{ WIKI_URL }}Install%20and%20Run%20Allura%20-%20Vagrant/"><button class="auto-margin">Quick Start</button></a>
+      <p class="pad-top-sm text-center">Get a quick start with Vagrant VM</p>
+    </div>
+
+    <div class="col-8 pad-vert-sm">
+      <img class="icon" src="theme/img/ic-resources-docs.png" alt="allura documentation" height="187">
+      <a href="{{ FORGE_ALLURA_URL }}docs/#running-allura"><button class="auto-margin">Documentation</button></a>
+      <p class="pad-top-sm text-center">Check out the Allura documentation</p>
+    </div>
+  </div>
+
+  <div class="row pad-top-xs">
+    <p class="text-center">Need help? <a href="http://mail-archives.apache.org/mod_mbox/allura-users/">Use the users@allura mailing list</a></p>
+  </div>
+</div>
+
+<div id="development" class="row bg-white pad-vert-xl">
+  <div class="col-20 no-float auto-margin">
+    <div class="row">
+      <h3 class="text-black text-center">Development</h3>
+      <p class="pad-md text-black">We welcome all developers and contributions. If you need any help making a fix or ideas for a new feature, send us an email on the mailing list, or ask in IRC (if we're around)</p>
+    </div>
+
+    <div class="row">
+      <ul class="auto-margin bg-shadow pad-sm">
+        <li><a class="text-white" href="http://mail-archives.apache.org/mod_mbox/allura-dev/">dev@allura Mailing List</a></li>
+        <li class="text-white"><a class="text-white pad-right-xs" href="irc://chat.freenode.net/allura">#allura on Freenode IRC</a>(<a class="text-white" href="https://sourceforge.net/p/allura/chat/">Archives</a>)</li>
+        <li><a class="text-white" href="{{ FORGE_ALLURA_URL }}docs/#extending-allura">Developer Docs</a></li>
+        <li><a class="text-white" href="{{ FORGE_ALLURA_URL }}docs/contributing.html">Contributing Guide</a></li>
+        <li><a class="text-white" href="https://builds.apache.org/job/Allura/">Jenkins CI Build</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="apache" class="row bg-orange pad-vert-xl">
+  <div class="col-20 no-float auto-margin">
+    <div class="row">
+      <h3 class="text-center">Apache Software Foundation</h3>
+    </div>
+
+    <div class="row">
+      <img class="auto-margin pad-vert-md" src="theme/img/logo-asf-apache.png" alt="apache software foundation logo">
+    </div>
+
+    <div class="row auto-margin button-container">
+      <div class="col-8 pad-vert-sm">
+        <a href="http://www.apache.org/licenses/"><button class="auto-margin">License</button></a>
+      </div>
+
+      <div class="col-8 pad-vert-sm">
+        <a href="http://www.apache.org/foundation/sponsorship.html"><button class="auto-margin">Sponsorship</button></a>
+      </div>
+
+      <div class="col-8 pad-vert-sm">
+        <a href="http://www.apache.org/foundation/thanks.html"><button class="auto-margin">Thanks</button></a>
+      </div>
+    </div>
+    <div class="row auto-margin button-container">
+      <div class="col-12 pad-vert-sm">
+        <a href="http://www.apache.org/security/"><button class="auto-margin">Security</button></a>
+      </div>
+
+      <div class="col-12 pad-vert-sm">
+        <a href="http://www.apache.org/"><button class="auto-margin">Apache™</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

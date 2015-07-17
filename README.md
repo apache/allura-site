@@ -4,7 +4,7 @@ Generated content is placed under root directory.
 
 # Bootstrapping pelican
 
-    ~$ mkvirtualenv allura-site
+    ~$ virtualenv allura-site
     ~$ pip install pelican markdown
 
 # Working on site

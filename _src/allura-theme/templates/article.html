@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ article.title|striptags }}
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  {% for description in article.description %}
+    <meta name="description" content="{{description}}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+<div class="row bg-white pad-vert-xl">
+  <div class="row">
+    <h3 class="text-black text-center">{{ article.title }}</h3>
+  </div>
+
+  <div class="post-info">
+    <abbr class="published" title="{{ article.date.isoformat() }}">
+      {{ article.locale_date }}
+    </abbr>
+	{% if article.modified %}
+    <abbr class="modified" title="{{ article.modified.isoformat() }}">
+      {{ article.locale_modified }}
+    </abbr>
+	{% endif %}
+  </div>
+
+  <div class="row">
+    <div class="col-20 no-float auto-margin">
+      <div class="row">
+        <div class="pad-md text-black">{{ article.content }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

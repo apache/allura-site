@@ -40,8 +40,8 @@
     {% block header %}
     <div id="header" class="row {% if xxl_header %}pad-vert-xxl{% endif %}">
       <header id="login_header" class="row">
-        <div class="bg-shadow pad-vert-sm">
-          <span><h1 class="text-center">Apache <img src="theme/img/logo_white.png" width="94"> Allura<span class="tm">™</span></h1></span>
+        <div class="bg-shadow pad-vert-md">
+          <span><h1 class="text-center"><a href="/">Apache <img src="theme/img/logo_white.png" width="94"> Allura<span class="tm">™</span></a></h1></span>
           <span></span>
           <h6 class="text-center">Open source project hosting platform</h6>
         </div>
@@ -55,7 +55,8 @@
     <div class="row">
       {% block footer %}
       <footer id="footer" class="bg-black text-white col-24">
-        <p class="copy pad-top-sm text-center">Copyright © {{ CURRENT_YEAR }} The Apache Software Foundation, Licensed under the Apache License, Version 2.0.</p>
+        <p class="copy pad-top-sm text-center">Copyright © {{ CURRENT_YEAR }} The Apache Software Foundation, Licensed under
+            <a href="http://www.apache.org/licenses/LICENSE-2.0.html">the Apache License, Version 2.0.</a></p>
         <p class="copy pad-bot-sm text-center">Apache, Allura, Apache Allura, and the Apache feather logo are trademarks of The Apache Software Foundation.</p>
       </footer>
       {% endblock footer %}

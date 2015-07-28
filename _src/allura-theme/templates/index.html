@@ -34,20 +34,29 @@
   </div>
 </div>
 
-<div id="download" class="row pad-vert-xl parallax" style="background-position: 0px 0px;">
+<div id="latest" class="row pad-vert-xl parallax" style="background-position: 0px 0px;">
   <div class="col-16 no-float auto-margin">
     <div class="row">
       <h3 class="text-center">Get the Latest Version of Allura</h3>
       <div class="row pad-vert-md">
-        <a href="http://www.apache.org/dyn/closer.cgi/allura/allura-{{ RELEASE_VERSION }}.tar.gz"><button class="auto-margin">Download v{{ RELEASE_VERSION }}</button></a>
-        <div class="col-24 auto-margin pad-vert-xs" style="max-width: 175px">
-          <span class="text-white">{{ RELEASE_DATE }}</span><span class="pull-right"><a href="{{ GIT_URL }}ci/asf_release_{{ RELEASE_VERSION }}/tree/CHANGES">Changelog</a></span>
+        <div id="release" class="col-12 auto-margin pad-vert-xs text-center">
+          <a href="http://www.apache.org/dyn/closer.cgi/allura/allura-{{ RELEASE_VERSION }}.tar.gz"><button class="auto-margin">Download v{{ RELEASE_VERSION }}</button></a>
+          <span class="text-white">{{ RELEASE_DATE }} &mdash;</span>
+          <a href="{{ GIT_URL }}ci/asf_release_{{ RELEASE_VERSION }}/tree/CHANGES">Changelog</a>
+          <ul>
+            <li class="text-white"><a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.md5" class="text-white" download="">md5</a>, <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha1" class="text-white" download="">sha1</a>, <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha512" class="text-white" download="">sha512 sums</a></li>
+            <li class="text-white">PGP <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.asc" class="text-white" download="">signature</a> &amp; <a href="{{ DIST_URL }}KEYS" class="text-white" download="">keys</a></li>
+          </ul>
+        </div>
+        <div id="news" class="col-12 auto-margin pad-vert-xs text-center">
+            <h5>News</h5>
+            <ul>
+                {% for art in articles[:5]%}
+                    <li><a href="{{ art.url }}">{{ art.title }}</a></li>
+                {% endfor %}
+            </ul>
         </div>
       </div>
-      <ul class="auto-margin bg-shadow pad-sm">
-        <li class="text-white"><a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.md5" class="text-white" download="">md5</a>, <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha1" class="text-white" download="">sha1</a>, <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha512" class="text-white" download="">sha512 sums</a></li>
-        <li class="text-white">PGP <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.asc" class="text-white" download="">signature</a> &amp; <a href="{{ DIST_URL }}KEYS" class="text-white" download="">keys</a></li>
-      </ul>
     </div>
   </div>
 

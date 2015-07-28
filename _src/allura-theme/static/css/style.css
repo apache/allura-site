@@ -323,6 +323,7 @@ button {
     border: 2px solid #FCFCFC;
     border-radius: 4px;
     color: #FCFCFC;
+    text-decoration: underline #ff9d00;
     cursor: pointer;
     font-size: 100%;
     outline: 0;
@@ -533,7 +534,7 @@ button:hover, button:focus, button:active {
     max-width: 800px;
 }
 
-#download {
+#latest {
     background-image: url('../img/bg-download-fire.jpg');
     border-bottom: 15px inset rgba(32, 32, 32, 0.4);
     border-top: 15px inset rgba(32, 32, 32, 0.4);
@@ -544,8 +545,18 @@ button:hover, button:focus, button:active {
     -webkit-transition: all 0.05s ease-in-out;
 }
 
-#download ul {
-    width: 225px;
+#release button {
+    margin-bottom: 5px;
+}
+#release ul {
+    padding-top: 15px;
+}
+#release li {
+    font-size: .8em;
+    padding: 0;
+}
+#news li {
+    color: white;
 }
 
 #development {
@@ -593,4 +604,13 @@ p > a{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+.post-info {
+    margin: 0 auto;
+    width: 200px;
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
 }

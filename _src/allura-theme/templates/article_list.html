@@ -7,9 +7,9 @@
 <h2>All articles</h2>
 {% endblock %}
 
-<div class="row bg-white pad-vert-lg text-center">
+<div class="row bg-white pad-bot-md text-center">
 {% for article in articles_page.object_list %}
-  <div class="row">
+  <div class="row pad-top-md">
     <h3><a class="text-black" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
   </div>
 

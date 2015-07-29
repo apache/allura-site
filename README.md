@@ -10,12 +10,14 @@ Generated content is placed under root directory.
 # Working on site
 
     ~$ cd _src
+    ~$ RELATIVE=1 make regenerate  # only use RELATIVE for local dev
 
-In two separate terminal windows run the following commands:
+Then open the html files directly, or run a little server with:
 
-    ~$ make regenerate  # watch source files and regenerate site
     ~$ make serve       # serve generated site at http://localhost:8000
 
 When changes are looking good - commit them (including generated files).
+
+    ~$ make html  # for a single publish 
 
 [1]: http://blog.getpelican.com/

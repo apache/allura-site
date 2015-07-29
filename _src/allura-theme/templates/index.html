@@ -2,6 +2,11 @@
 
 {% set xxl_header = True %}
 
+{% block head %}
+    {{ super() }}
+    <link rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/feeds/all.atom.xml" title="Atom Feed">
+{% endblock %}
+
 {% block content %}
 <div id="about" class="row bg-white pad-vert-xl">
   <div class="row">
@@ -52,7 +57,7 @@
             <h5>News</h5>
             <ul>
                 {% for art in articles[:5]%}
-                    <li><a href="{{ art.url }}">{{ art.title }}</a></li>
+                    <li><a href="{{ SITEURL }}/{{ art.url }}">{{ art.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>

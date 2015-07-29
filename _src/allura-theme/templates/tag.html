@@ -1,0 +1,12 @@
+{% extends "article_list.html" %}
+
+{% block title %}Apache Allura : '{{ tag }}' articles{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/feeds/tag.{{ tag }}.atom.xml" title="Articles tagged '{{ tag }}">
+{% endblock %}
+
+{% block content_title %}
+    <h2>Articles tagged '{{ tag }}'</h2>
+{% endblock %}

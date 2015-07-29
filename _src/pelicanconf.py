@@ -30,6 +30,18 @@ EXTRA_PATH_METADATA = {
 }
 DIRECT_TEMPLATES = ['index', '404']
 
+ARTICLE_SAVE_AS = 'posts/{date:%Y}-{slug}.html'
+ARTICLE_URL = 'posts/{date:%Y}-{slug}.html'
+# don't generate archive pages for these
+AUTHOR_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+CATEGORY_FEED_ATOM = None
+TAG_FEED_ATOM = 'feeds/tag.%s.atom.xml'
+
 CURRENT_YEAR = dt.date.today().year
 
 RELEASE_VERSION = '1.3.0'

@@ -12,10 +12,10 @@
 
   <!--    Facebook Meta Info-->
   <meta property="og:url" content="{{ SITEURL }}">
-  <meta property="og:image" content="theme/img/logo-asf-apache.png">
+  <meta property="og:image" content="{{ SITEURL }}/theme/img/logo-asf-apache.png">
   <meta property="og:description" content="{{ DESCRIPTION }}">
   <meta property="og:title" content="{{ SITENAME }}">
-  <meta property="og:site_name" content="{{ SITENAME }}j">
+  <meta property="og:site_name" content="{{ SITENAME }}">
   <meta property="og:see_also" content="{{ SITEURL }}">
 
   <!--    Twitter Meta Info-->
@@ -23,15 +23,15 @@
   <meta name="twitter:url" content="{{ SITEURL }}">
   <meta name="twitter:title" content="{{ SITENAME }}">
   <meta name="twitter:description" content="{{ DESCRIPTION }}">
-  <meta name="twitter:image" content="theme/img/logo-asf-apache.png">
+  <meta name="twitter:image" content="{{ SITEURL }}/theme/img/logo-asf-apache.png">
 
   <!--    Google+ Meta Info-->
   <meta itemprop="name" content="{{ SITENAME }}">
   <meta itemprop="description" content="{{ DESCRIPTION }}">
-  <meta itemprop="image" content="theme/img/logo-asf-apache.png">
+  <meta itemprop="image" content="{{ SITEURL }}/theme/img/logo-asf-apache.png">
 
-  <link rel="stylesheet" type="text/css" href="theme/css/flex.min.css">
-  <link rel="stylesheet" type="text/css" href="theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/flex.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
   {% endblock head %}
 </head>
 
@@ -41,7 +41,7 @@
     <div id="header" class="row {% if xxl_header %}pad-vert-xxl{% endif %}">
       <header id="login_header" class="row">
         <div class="bg-shadow pad-vert-md">
-          <span><h1 class="text-center"><a href="/">Apache <img src="theme/img/logo_white.png" width="94"> Allura<span class="tm">™</span></a></h1></span>
+          <span><h1 class="text-center"><a href="{{ SITEURL }}">Apache <img src="{{ SITEURL }}/theme/img/logo_white.png" width="94"> Allura<span class="tm">™</span></a></h1></span>
           <span></span>
           <h6 class="text-center">Open source project hosting platform</h6>
         </div>
@@ -63,8 +63,8 @@
     </div>
   </section>
 
-  <script type="application/javascript" src="theme/js/jquery-1.11.2.min.js"></script>
-  <script type="application/javascript" src="theme/js/frontend.js"></script>
+  <script type="application/javascript" src="{{ SITEURL }}/theme/js/jquery-1.11.2.min.js"></script>
+  <script type="application/javascript" src="{{ SITEURL }}/theme/js/frontend.js"></script>
   <!-- Credits
 
           Logo Design: Will Leonard

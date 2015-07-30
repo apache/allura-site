@@ -9,6 +9,7 @@ AUTHOR = ''
 DESCRIPTION = 'Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.'
 KEYWORDS = []
 DEFAULT_LANG = 'en'
+LOCALE = 'POSIX'
 
 PATH = 'content'
 OUTPUT_PATH = '../'

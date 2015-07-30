@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import datetime as dt
 
 SITENAME = 'Apache Allura'
-SITEURL = 'http://allura.apache.org'
+SITEURL = '//allura.apache.org'
 AUTHOR = ''
 DESCRIPTION = 'Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.'
 KEYWORDS = []

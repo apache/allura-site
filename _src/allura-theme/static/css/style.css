@@ -159,7 +159,6 @@ blockquote {
 }
 
 ul li {
-    list-style: none;
     margin-left: 1em;
     padding: 10px 0;
 }
@@ -606,6 +605,9 @@ a {
     margin-right: auto;
 }
 
+.pg-index ul li {
+    list-style: none;
+}
 
 .post-info {
     margin: 0 auto;

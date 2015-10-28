@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2015-08-20T00:00:00+00:00</updated><entry><title>REST API documentation</title><link href="//allura.apache.org/posts/2015-rest-api-docs.html" rel="alternate"></link><updated>2015-08-20T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2015-08-20:posts/2015-rest-api-docs.html</id><summary type="html">&lt;p&gt;We have just published new docs for Allura's REST API.  The API is documented as
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2015-10-28T00:00:00+00:00</updated><entry><title>Updated Icons, Cleaner Nav Bar</title><link href="//allura.apache.org/posts/2015-updated-icons.html" rel="alternate"></link><updated>2015-10-28T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2015-10-28:posts/2015-updated-icons.html</id><summary type="html">&lt;p&gt;Two big UI improvements have landed in Allura's master branch recently.&lt;/p&gt;
+&lt;p&gt;First, we've removed the icons for each tool (wiki, discussion, code, etc).  The icons looked dated, and cluttered
+the project navigation bar.  They also presented challenges of what tool icon to use when a new tool was added.  So now
+they are gone, and the project nav bar in particular looks much cleaner:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Nav bar screenshot" src="//allura.apache.org/images/2015-updated-icons-nav.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Second, and even more exciting, is the use of Font Awesome icons throught Allura.  They replace a small custom icon set
+that had limited choices and was fixed-size.  Font Awesome has lots of choices and looks great on high resolution
+screens:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Icons screenshot" src="//allura.apache.org/images/2015-updated-icons.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Hope you enjoy a nicer looking Allura!&lt;/p&gt;
+&lt;style&gt;
+.pad-md img {
+    margin: 2em;
+}
+&lt;/style&gt;</summary><category term="feature"></category></entry><entry><title>REST API documentation</title><link href="//allura.apache.org/posts/2015-rest-api-docs.html" rel="alternate"></link><updated>2015-08-20T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2015-08-20:posts/2015-rest-api-docs.html</id><summary type="html">&lt;p&gt;We have just published new docs for Allura's REST API.  The API is documented as
 &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/Allura/docs/api-rest/"&gt;RAML files&lt;/a&gt; including many examples
 and schemas.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://anypoint.mulesoft.com/apiplatform/forge-allura/#/portals/organizations/86c00a85-31e6-4302-b36d-049ca5d042fd/apis/32370/versions/33732"&gt;View the API documentation here.&lt;/a&gt;

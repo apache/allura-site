@@ -12,7 +12,7 @@ they are gone, and the project nav bar in particular looks much cleaner:
 
 ![Nav bar screenshot]({filename}/images/2015-updated-icons-nav.png)
 
-Second, and even more exciting, is the use of Font Awesome icons throught Allura.  They replace a small custom icon set
+Second, and even more exciting, is the use of Font Awesome icons throughout Allura.  They replace a small custom icon set
 that had limited choices and was fixed-size.  Font Awesome has lots of choices and looks great on high resolution
 screens:
 

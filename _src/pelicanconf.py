@@ -20,9 +20,8 @@ OUTPUT_RETENTION = [
     "README.md",
 ]
 STATIC_PATHS = [
-    'extra/robots.txt',
-    'extra/favicon.ico',
-    'extra/.htaccess',
+    'extra',
+    'images',
 ]
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},

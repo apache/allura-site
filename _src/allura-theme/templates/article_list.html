@@ -8,7 +8,7 @@
 {% endblock %}
 
 <div class="row bg-white pad-bot-md text-center">
-{% for article in articles_page.object_list %}
+{% for article in (articles_page is defined and articles_page.object_list) or custom_article_list %}
   <div class="row pad-top-md">
     <h3><a class="text-black" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
   </div>
@@ -23,7 +23,7 @@
 {% endfor %}
 </div>
 
-{% if articles_page.has_other_pages() %}
+{% if articles_page|default and articles_page.has_other_pages() %}
     {% include 'pagination.html' %}
 {% endif %}
 

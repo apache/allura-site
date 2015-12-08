@@ -28,7 +28,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/.htaccess': {'path': '.htaccess'},
 }
-DIRECT_TEMPLATES = ['index', '404']
+DIRECT_TEMPLATES = ['index', '404', 'news']
 
 ARTICLE_SAVE_AS = 'posts/{date:%Y}-{slug}.html'
 ARTICLE_URL = 'posts/{date:%Y}-{slug}.html'

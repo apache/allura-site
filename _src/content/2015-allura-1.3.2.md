@@ -2,7 +2,7 @@ Title: Apache Allura 1.3.2 released
 Date: 2015-12-08
 Tags: release
 Slug: allura-1.3.2
-Summary: Version 1.3.2 of Allura brings security fixes, new markdown editor, CORS, and more.
+Summary: Version 1.3.2 of Allura: updated icons, editor enhancements, admin functionality, and more.
 
 Apache Allura 1.3.2 has been released.  It includes 2 security fixes and dozens of small fixes and improvements.  The major
 new features are:

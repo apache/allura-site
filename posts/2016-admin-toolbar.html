@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>    Apache Allura 1.3.2 released
+  <title>    New admin mode now available!
 </title>
   <meta charset="utf-8">
   <meta name="description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
@@ -52,36 +52,39 @@
     <div class="article-content">
 <div class="row bg-white pad-vert-lg">
   <div class="row">
-    <h3 class="text-black text-center">Apache Allura 1.3.2 released</h3>
+    <h3 class="text-black text-center">New admin mode now available!</h3>
   </div>
 
   <div class="post-info text-center">
     Published:
-    <abbr class="published" title="2015-12-08T00:00:00+00:00">
-      Tue 08 December 2015
+    <abbr class="published" title="2016-01-14T00:00:00+00:00">
+      Thu 14 January 2016
     </abbr>
     <br>
     Tagged:
-        <a href="//allura.apache.org/tag/release.html">release</a>
+        <a href="//allura.apache.org/tag/feature.html">feature</a>
   </div>
 
   <div class="row">
     <div class="col-20 no-float auto-margin">
       <div class="row">
-        <div class="pad-md text-black"><p>Apache Allura 1.3.2 has been released.  It includes 2 security fixes and dozens of small fixes and improvements.  The major
-new features are:</p>
-<ul>
-<li><a href="//allura.apache.org/posts/2015-updated-icons.html">Updated icons and cleaner project navigation bar.</a></li>
-<li>Enhancements to the <a href="//allura.apache.org/posts/2015-markdown-editor.html">Markdown editor added in 1.3.1</a>.  We're talking button
-  tooltips, alternate header types, and buttons for section headers, code (works with blocks or inline code), horizontal
-  rule, and tables.</li>
-<li>Admin options for any tool available directly in the left sidebar.  No more digging through separate Admin navigation.</li>
-<li>API documented in <a href="http://raml.org/">.raml</a> files.  We <a href="//allura.apache.org/posts/2015-rest-api-docs.html">published the API docs already</a>,
-  which are generated from the .raml definition files.</li>
-<li>A site admin (<code>/nf/admin</code>) page to permanently delete projects and their data.</li>
-</ul>
-<p><a href="http://www.apache.org/dyn/closer.cgi/allura/">Download Allura</a> and <a href="https://forge-allura.apache.org/docs/getting_started/installation.html">install it</a> today.</p>
-<p><a href="https://forge-allura.apache.org/p/allura/git/ci/asf_release_1.3.2/tree/CHANGES">View the full 1.3.2 Changelog</a></p></div>
+        <div class="pad-md text-black"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When you use the same tools everyday, it is easy to evaluate how you spend most of your time. Even more apparent are the steps and processes that slow you down. Since all of us on the development team use these tools ourselves, we spent the end of the year discussing what processes have been slowing us down. Have you ever tried to rename a repo or give a user permission to moderate your project’s discussions? Did you even know you could do these things?</p>
+<p><em>Exactly</em>. </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As we realized where the hitch in the workflow was, we knew there was a more elegant solution. So we set out to build a new admin mode for all projects’ navigation bars. It provides easy access to add new tools to your project, as well as rename, reorder, configure, and delete any tools.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To take this idea from concept to completion, we needed to modernize our frontend tooling. By leveraging Babel we were able to make use of the latest features of Javascript ES2015 and incorporate React and JSX into our workflow. We also wanted to ensure we maintained a clean, consistent style in our frontend code, so we started implementing ESLint. To tie it all together, we then chose Broccoli for our build system because of its incremental rebuilding and its incredibly fast compile times. By utilizing all these resources, we were able to create a new toolbar that approaches customization in a modern way and, as a byproduct, made future frontend endeavours more interesting to work on. </p>
+<h4>Installing a New Tool</h4>
+<p><img src="//allura.apache.org/images/toolbar/install.gif" class="drop-shadow" width="815" /></p>
+<p>The new Admin Toolbar is easy to find and use. There is a “Add New” link on every page, letting you install a new tool from anywhere.  With improved features like tooltips and real-time validation, the updated experience is more intuitive than ever.</p>
+<h4>Tool Options</h4>
+<p><img src="//allura.apache.org/images/toolbar/edit.gif" class="drop-shadow" width="815" /></p>
+<p>To change any tool settings, use the Lock/Unlock button on the right side of the bar.  This feature makes these options accessible when you need them and inconspicuous when you don’t.  And the gear icon opens up a context menu to manage your tools right from the interface, such as renaming, deleting, or setting specific options.  So you’re always only a few clicks away from all your tool settings.</p>
+<h4>Reordering Tools</h4>
+<p><img src="//allura.apache.org/images/toolbar/reorder.gif" class="drop-shadow" width="815" /></p>
+<p>Some key tools are anchored in place, but many tools are movable by dragging and dropping to the desired location.  Just the unlock button, and then drag and drop them into the order you want.  You can even customize the order within sub-menu dropdowns using this method.</p>
+<h4>Grouping Similar Tools into Dropdowns</h4>
+<p><img src="//allura.apache.org/images/toolbar/grouping.gif" class="drop-shadow" width="815"/></p>
+<p>When you have multiple tools of the same type, the Grouping Threshold option is available.  It determines if they will all fit in the navigation bar, or automatically be grouped into a dropdown.</p>
+<p>Go check it out!</p></div>
       </div>
     </div>
   </div>

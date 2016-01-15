@@ -1,0 +1,33 @@
+body{
+    background: #FCFCFC;
+}
+.article-content{
+    max-width: 1000px;
+    margin: auto;
+    background: #FCFCFC;
+    box-sizing: border-box;
+}
+h1, h2, h3 {
+    color: #ff9d00;
+    margin-top: 3rem;
+}
+
+h4 {
+    color: #ff9d00;
+    font-size: larger;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    color: #2e2e2e;
+    font-size: large;
+}
+
+h6 {
+    margin-top: 2rem;
+}
+
+.drop-shadow{
+    box-shadow: -3px 3px 2px #909090;
+}

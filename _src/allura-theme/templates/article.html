@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+    {% block extra_css %}
+          <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/article.css">
+    {% endblock extra_css %}
+
 {% block title %}
     {{ article.title|striptags }}
 {% endblock %}
@@ -13,6 +17,7 @@
 {% endblock %}
 
 {% block content %}
+    <div class="article-content">
 <div class="row bg-white pad-vert-lg">
   <div class="row">
     <h3 class="text-black text-center">{{ article.title }}</h3>
@@ -38,4 +43,10 @@
     </div>
   </div>
 </div>
+</div>
 {% endblock %}
+
+
+  {% block extra_js %}
+        <script type="application/javascript" src="{{ SITEURL }}/theme/js/article.js"></script>
+  {% endblock extra_js %}

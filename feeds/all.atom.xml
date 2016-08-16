@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2016-08-09T00:00:00+00:00</updated><entry><title>Apache Allura - GSoC 2016 Summary</title><link href="//allura.apache.org/posts/2016-gsoc-16.html" rel="alternate"></link><published>2016-08-09T00:00:00+00:00</published><author><name></name></author><id>tag:allura.apache.org,2016-08-09:posts/2016-gsoc-16.html</id><summary type="html">&lt;p&gt;This post has the summary of my work during GSoC 2016. Hopefully I was able to cover everything. You can also see my work on &lt;a href="https://forge-allura.apache.org/p/allura/git"&gt;forge-allura&lt;/a&gt;. Also, you can visually see a list of my commits made during GSoC that also contains the miscellaneous work  &lt;a href="https://github.com/apache/allura/commits/f403b8c4e44f2065e4d4529050d499252e914f25?author=rhnvrm"&gt;here&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2016-08-09T00:00:00+00:00</updated><entry><title>Apache Allura - GSoC 2016 Summary</title><link href="//allura.apache.org/posts/2016-gsoc-16.html" rel="alternate"></link><published>2016-08-09T00:00:00+00:00</published><author><name></name></author><id>tag:allura.apache.org,2016-08-09:posts/2016-gsoc-16.html</id><summary type="html">&lt;p&gt;My name is &lt;a href="http://rohanverma.net"&gt;Rohan Verma&lt;/a&gt; and my nick is &lt;a href="https://twitter.com/rhnvrm"&gt;rhnvrm&lt;/a&gt;. During the past few month's I have been working on Apache Allura as a GSoC Intern. I am an undergraduate student and am currently based in India. I have been passionate about programming and software development since my school days. Being a GNU/Linux user I used to frequently use SourceForge and Github for downloading and exploring the source code published by various FLOSS communities. Through GitHub and SourceForge I gained interest in getting involved in contributing back to the community and Google Summer of Code was a great opportunity that came my way. I had found Allura to be amazing during my search for GSoC projects in terms of purpose, implementation and community. Therefore, I chose to work with my mentor for the project Dave Brondsema during this summer.&lt;/p&gt;
+&lt;p&gt;This post contains the summary of my work during Google Summer of Code 2016. Hopefully I was able to cover everything. You can also see my work on &lt;a href="https://forge-allura.apache.org/p/allura/git"&gt;forge-allura&lt;/a&gt;. Also, you can visually see a list of my commits made during GSoC that also contains the miscellaneous work commits &lt;a href="https://github.com/apache/allura/commits/f403b8c4e44f2065e4d4529050d499252e914f25?author=rhnvrm"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Discussion Tool Changes&lt;/h3&gt;
 &lt;p&gt;The idea behind this change was to promote discussions on the platform. Most conversations on the web are now displayed in a similar format. The replies to a comment are also now anchored to the left, i.e. don't become shorter in length and are only shifted towards the left along with a smaller avatar. We have also moved away from shadows under the avatars since they do not match with the current design scheme.&lt;/p&gt;
 &lt;p&gt;The design enhances the username and avatar of the user to make it easier to recognize who has authored the comment. Also, the buttons used to interact in the discussion are now displayed on the upper right side. Also, there is now a unified design theme for all buttons including the moderation buttons. These set of buttons can easily be extendened in the future as well. This also makes more space available for the content. Images now do not overflow outside these bubbles and fit inside the bubbles.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Design Example of Discussion" src="http://i.imgur.com/4gmxwcL.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Design Example of Discussion" src="https://i.imgur.com/4gmxwcL.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Another prominent change is how we now display attachments. There is now a dedicated download and delete button for all attachments and an icon beside the file name displaying the type of attachment.&lt;/p&gt;
 &lt;p&gt;Support for viewing the photo attachments has also been added by clicking on the image thumbnail inside the attachment box.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Preview Images" src="http://i.imgur.com/Qw2g7at.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Preview Images" src="https://i.imgur.com/Qw2g7at.png" /&gt;&lt;/p&gt;
 &lt;p&gt;There has also been a change in how we display meta posts which share information rather than conversational text that is generated by the interaction of the user with the tools. These are not highlighted and uses smaller fonts so it is easier for the eyes to find real content and also distinguish between meta information and the same.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Meta Posts" src="http://i.imgur.com/Ch77UNq.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Meta Posts" src="https://i.imgur.com/Ch77UNq.png" /&gt;&lt;/p&gt;
 &lt;p&gt;You can also use Unicode Emoji's within the discussion tool and they will be rendered as Twitter Style Emoji. This is very useful since we now have support for displaying the emoji even if the user don't have the proper font's to render them in his browser. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imgur" src="http://i.imgur.com/LoTab39.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imgur" src="https://i.imgur.com/LoTab39.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Emoji Support enables users to use their devices emoji input keyboards and enter data. Also, now teams can use a simple Thumbs Up emoji instead of writing words to express themselves.&lt;/p&gt;
 &lt;p&gt;You can view the results live on &lt;a href="https://sourceforge.net/p/texstudio/bugs/1872/"&gt;SourceForge&lt;/a&gt; as well.&lt;/p&gt;
 &lt;h3&gt;Improved Landing Page&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Imgur" src="http://i.imgur.com/kvul0nB.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imgur" src="https://i.imgur.com/kvul0nB.png" /&gt;&lt;/p&gt;
 &lt;p&gt;We now have a better landing page. A landing page is forms the first impression for the tool. Although, if you are probably using SourceForge, your landing page might be the Project Catalog. &lt;/p&gt;
 &lt;p&gt;Now we list all the neighborhoods in a block showing it's logo along with the name and number of projects it contains. &lt;/p&gt;
 &lt;p&gt;It makes it easier to digest the concept of neighborhoods for users who are used to something similar to Github or GitLab.&lt;/p&gt;
 &lt;h3&gt;Minor Improvements in Ticket Listing and Search&lt;/h3&gt;
 &lt;p&gt;Now you can resize the length of the columns in the ticket listing.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Resize" src="http://i.imgur.com/iC3fGex.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Resize" src="https://i.imgur.com/iC3fGex.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;Also you can now click on the username in the Owner column to view all tickets that have been assigned to that user directly from the ticket listing.&lt;/p&gt;
 &lt;h3&gt;Merge Request Flow Improvements&lt;/h3&gt;
 &lt;p&gt;Now we show a link to Merge Requests listing in the side panel in all tools that support them even if none have been created. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="List if zero" src="http://i.imgur.com/tfTkcjR.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="List if zero" src="https://i.imgur.com/tfTkcjR.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Also the filtering of merge requests have changed a bit. Now we have a new set of filter buttons that we use to filter the merge requests that are either open, rejected, merged. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Filter MRs" src="http://i.imgur.com/izu38m5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Filter MRs" src="https://i.imgur.com/izu38m5.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Also, there are now dedicated buttons matching the Forge theme that you can use to manage your merge requests. We now have an array of buttons and a text message that displays the status of the merge conflicts and if a one click merge is possible if you have access to that information. Users with correct priveleges can also click on the Reject button to reject and close the MR in two clicks including a confirmation dialog. &lt;/p&gt;
 &lt;p&gt;Also, you can now Refresh the commits without having to manually edit the merge request, saving 4-5 clicks using the Refresh Commits button.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imgur" src="http://i.imgur.com/rkjlglc.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imgur" src="https://i.imgur.com/rkjlglc.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;What could not be completed or was not done&lt;/h3&gt;
 &lt;h4&gt;Implement async loading of comments and allow them to be paginated.&lt;/h4&gt;
 &lt;p&gt;This was not implemented since there would be a loss in the traffic for the discussions. This would have a huge impact in search rankings for comments since crawlers don't index async loaded comments and searching for problems on the internet is a very important way to reach this content. Suppose you have a problem you have faced with TexStudio software and search about it on a search engine and someone else has also reported a problem on it's bug tracker then if it is not indexed in the search engine we will not be able to find it on the search results.&lt;/p&gt;
@@ -43,9 +44,9 @@
 &lt;h4&gt;Extend the models in the threads to allow voting(express +1, LGTM etc.) on individual comments.&lt;/h4&gt;
 &lt;p&gt;There were two ways I tried to implement this. &lt;/p&gt;
 &lt;p&gt;First was to add a thumbs up button on the menu of the discussion bubble along side reply.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imgur" src="http://i.imgur.com/LoTab39.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imgur" src="https://i.imgur.com/LoTab39.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Clicking that button adds a meta post as a reply to the post. But it looks ugly and does not seem useful.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Plus 1" src="http://i.imgur.com/GycKCDW.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Plus 1" src="https://i.imgur.com/GycKCDW.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The other method was to try to make the artifact votable but here the problem was that I could not get it to work as per my thought of how it should look and work. In this way I wanted a menu on the bottom. &lt;/p&gt;
 &lt;p&gt;The code for all of these unimplemented work is available on my forked repo on forge-allura &lt;a href="https://forge-allura.apache.org/u/rhnvrm/allura/ref/master/branches/"&gt;here&lt;/a&gt;. You can find all the branches with the unimplemented work mentioned here as well as other experiments. (My Branches begin with &lt;code&gt;feature&lt;/code&gt; or &lt;code&gt;rhnvrm/&lt;/code&gt;)&lt;/p&gt;
 &lt;h3&gt;Other Cool Stuff I did related to Allura&lt;/h3&gt;
@@ -64,7 +65,7 @@ clone the repository using &lt;code&gt;git clone https://rhnvrm@forge-allura.apa
 &lt;p&gt;To show how it can even be run on a low powered device I installed Allura for me and my friends on a RPi 3B model.&lt;/p&gt;
 &lt;p&gt;There were various problems that I faced during installation due to it being an ARM based device. I first tried to install using docker since it was easier but after installing docker and docker-compose from hyperiot I soon realized that it was not possible as it is ARM based and we don't provide docker support for that.&lt;/p&gt;
 &lt;p&gt;Here the makefile was very useful. Although I did not use it directly but I atleast had an idea how to install Allura step by step instead of having to re read the manual again and again.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imgur" src="http://i.imgur.com/2VdVmnN.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imgur" src="https://i.imgur.com/2VdVmnN.jpg" /&gt;&lt;/p&gt;
 &lt;h4&gt;Deployed Allura for my University&lt;/h4&gt;
 &lt;p&gt;Using the Raspberry Pi I am planning to deploy it for my university for using it for our Coding Club and also for internal usage. I have emailed my department and am hoping for a positive response.&lt;/p&gt;
 &lt;h4&gt;Setup and hosted a small Allura Instance for testing on Digital Ocean&lt;/h4&gt;
@@ -79,9 +80,9 @@ clone the repository using &lt;code&gt;git clone https://rhnvrm@forge-allura.apa
 &lt;li&gt;Pomodoro Timer App for Gnome&lt;/li&gt;
 &lt;li&gt;Postman&lt;/li&gt;
 &lt;li&gt;HexChat&lt;/li&gt;
-&lt;li&gt;Imgur for hosting the image album (&lt;a href="https://imgur.com/a/r2oPI"&gt;https://imgur.com/a/r2oPI&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Imgur for hosting the &lt;a href="https://imgur.com/a/r2oPI"&gt;image album&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;(This blog was originally posted on &lt;a href="https://rhnvrm.github.io/2016-08-09-apache-allura-gsoc-16-summary/"&gt;rhnvrm.github.io&lt;/a&gt;. You can read more about the Author at &lt;a href="http://rohanverma.net/"&gt;rohanverma.net&lt;/a&gt;)&lt;/p&gt;</summary><category term="gsoc"></category></entry><entry><title>Apache Allura 1.4.0 released</title><link href="//allura.apache.org/posts/2016-allura-1.4.0.html" rel="alternate"></link><published>2016-04-12T00:00:00+00:00</published><author><name></name></author><id>tag:allura.apache.org,2016-04-12:posts/2016-allura-1.4.0.html</id><summary type="html">&lt;p&gt;Apache Allura 1.4.0 has been released.  The biggest new feature is the Admin Nav Bar.
+&lt;p&gt;(This blog was originally posted on my personal blog at &lt;a href="https://rhnvrm.github.io/2016-08-09-apache-allura-gsoc-16-summary/"&gt;rhnvrm.github.io&lt;/a&gt;. You can read more about me at &lt;a href="http://rohanverma.net/"&gt;rohanverma.net&lt;/a&gt;)&lt;/p&gt;</summary><category term="gsoc"></category></entry><entry><title>Apache Allura 1.4.0 released</title><link href="//allura.apache.org/posts/2016-allura-1.4.0.html" rel="alternate"></link><published>2016-04-12T00:00:00+00:00</published><author><name></name></author><id>tag:allura.apache.org,2016-04-12:posts/2016-allura-1.4.0.html</id><summary type="html">&lt;p&gt;Apache Allura 1.4.0 has been released.  The biggest new feature is the Admin Nav Bar.
 It's a complete overhaul of how you customize the tools in your project.
 Read our &lt;a href="//allura.apache.org/posts/2016-admin-toolbar.html"&gt;admin toolbar post&lt;/a&gt; to see how much easier it is to access tool
 configurations and add new tools.&lt;/p&gt;

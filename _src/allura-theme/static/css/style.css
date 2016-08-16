@@ -616,3 +616,7 @@ a {
     width: -moz-max-content;    /* Firefox/Gecko */
     width: -webkit-max-content; /* Chrome */
 }
+
+.row img{
+    width: 100%;
+}

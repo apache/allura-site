@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2016-04-12T00:00:00+00:00</updated><entry><title>Apache Allura 1.4.0 released</title><link href="//allura.apache.org/posts/2016-allura-1.4.0.html" rel="alternate"></link><published>2016-04-12T00:00:00+00:00</published><author><name></name></author><id>tag:allura.apache.org,2016-04-12:posts/2016-allura-1.4.0.html</id><summary type="html">&lt;p&gt;Apache Allura 1.4.0 has been released.  The biggest new feature is the Admin Nav Bar.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2016-08-23T00:00:00+00:00</updated><entry><title>Apache Allura 1.5.0 released</title><link href="//allura.apache.org/posts/2016-allura-1.5.0.html" rel="alternate"></link><published>2016-08-23T00:00:00+00:00</published><author><name></name></author><id>tag:allura.apache.org,2016-08-23:posts/2016-allura-1.5.0.html</id><summary type="html">&lt;h4&gt;New Features&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.5.0 has been released.  Major new features include a guided tour after project registration,
+improved design for discussions and their attachments, and various usability improvements for merge requests.  Many
+of the changes came from work done during Google Summer of Code.&lt;/p&gt;
+&lt;p&gt;See our &lt;a href="//allura.apache.org/posts/2016-gsoc-16.html"&gt;Google Summer of Code Summary&lt;/a&gt; for details on all those changes.&lt;/p&gt;
+&lt;p&gt;There are lots of other fixes and improvements, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/rel/1.5.0/~/tree/CHANGES"&gt;changelog&lt;/a&gt; for details.&lt;/p&gt;
+&lt;h4&gt;Upgrade notes&lt;/h4&gt;
+&lt;p&gt;No changes are required unless you wish to use the new rate limiting config.  If so, copy all the new
+"rate_limits" settings from &lt;code&gt;development.ini&lt;/code&gt; into your &lt;code&gt;.ini&lt;/code&gt; file and configure appropriate values.  Then run
+&lt;code&gt;paster ensure_index development.ini&lt;/code&gt;.  Or if you are using Docker, run:
+&lt;code&gt;docker-compose run taskd paster ensure_index docker-dev.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;Get 1.5.0&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://www.apache.org/dyn/closer.cgi/allura/"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</summary><category term="release"></category></entry><entry><title>Apache Allura 1.4.0 released</title><link href="//allura.apache.org/posts/2016-allura-1.4.0.html" rel="alternate"></link><published>2016-04-12T00:00:00+00:00</published><author><name></name></author><id>tag:allura.apache.org,2016-04-12:posts/2016-allura-1.4.0.html</id><summary type="html">&lt;p&gt;Apache Allura 1.4.0 has been released.  The biggest new feature is the Admin Nav Bar.
 It's a complete overhaul of how you customize the tools in your project.
 Read our &lt;a href="//allura.apache.org/posts/2016-admin-toolbar.html"&gt;admin toolbar post&lt;/a&gt; to see how much easier it is to access tool
 configurations and add new tools.&lt;/p&gt;

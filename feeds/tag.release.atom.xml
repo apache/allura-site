@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2017-06-28T00:00:00+00:00</updated><entry><title>Apache Allura 1.7.0 released</title><link href="//allura.apache.org/posts/2017-allura-1.7.0.html" rel="alternate"></link><published>2017-06-28T00:00:00+00:00</published><updated>2017-06-28T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2017-06-28:/posts/2017-allura-1.7.0.html</id><summary type="html">&lt;p&gt;Version 1.7.0 of Allura: Multifactor authentication, git-http docker container,  per-thread subscriptions in discussion forums, and more.&lt;/p&gt;</summary><content type="html">&lt;h4&gt;New Features&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2018-02-06T00:00:00+00:00</updated><entry><title>Apache Allura 1.8.0 released</title><link href="//allura.apache.org/posts/2018-allura-1.8.0.html" rel="alternate"></link><published>2018-02-06T00:00:00+00:00</published><updated>2018-02-06T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2018-02-06:/posts/2018-allura-1.8.0.html</id><summary type="html">&lt;p&gt;Version 1.8.0 of Allura released, with many fixes &amp;amp; improvements and a critical security fix.&lt;/p&gt;</summary><content type="html">&lt;h4&gt;New Features&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.8.0 has been released.
+It contains a Docker setup for production environments, and improved security and auditing around user logins.
+This release also contains a large number of fixes and smaller improvements.  To see all the details, check out the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;release changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Important Security Fix&lt;/h4&gt;
+&lt;p&gt;CVE-2018-1299 Apache Allura directory traversal vulnerability&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;Apache Allura 1.7.0 and earlier&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Unauthenticated attackers may retrieve arbitrary files through the Allura web
+application.  Some webservers used with Allura, such as Nginx, Apache/mod_wsgi
+or paster may prevent the attack from succeeding.  Others, such as gunicorn do
+not prevent it and leave Allura vulnerable.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users of vulnerable webservers with Allura should upgrade to Allura 1.8.0
+immediately.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;&lt;br&gt;
+This issue was discovered by Everardo Padilla Saca&lt;/p&gt;
+&lt;h4&gt;Get 1.8.0&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://www.apache.org/dyn/closer.cgi/allura/"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</content><category term="release"></category></entry><entry><title>Apache Allura 1.7.0 released</title><link href="//allura.apache.org/posts/2017-allura-1.7.0.html" rel="alternate"></link><published>2017-06-28T00:00:00+00:00</published><updated>2017-06-28T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2017-06-28:/posts/2017-allura-1.7.0.html</id><summary type="html">&lt;p&gt;Version 1.7.0 of Allura: Multifactor authentication, git-http docker container,  per-thread subscriptions in discussion forums, and more.&lt;/p&gt;</summary><content type="html">&lt;h4&gt;New Features&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.7.0 has been released, with support for hi-res project logos, and better content control for "neighborhood" landing pages by using wiki pages.&lt;/p&gt;
 &lt;p&gt;This release also contains numerous small improvements and bug fixes.  To see all the details, check out the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/rel/1.7.0/~/tree/CHANGES"&gt;release changelog&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Get 1.7.0&lt;/h4&gt;

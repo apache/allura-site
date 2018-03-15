@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2018-02-06T00:00:00+00:00</updated><entry><title>Apache Allura 1.8.0 released</title><link href="//allura.apache.org/posts/2018-allura-1.8.0.html" rel="alternate"></link><published>2018-02-06T00:00:00+00:00</published><updated>2018-02-06T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2018-02-06:/posts/2018-allura-1.8.0.html</id><summary type="html">&lt;p&gt;Version 1.8.0 of Allura released, with many fixes &amp;amp; improvements and a critical security fix.&lt;/p&gt;</summary><content type="html">&lt;h4&gt;New Features&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2018-03-14T00:00:00+00:00</updated><entry><title>Apache Allura 1.8.1 released</title><link href="//allura.apache.org/posts/2018-allura-1.8.1.html" rel="alternate"></link><published>2018-03-14T00:00:00+00:00</published><updated>2018-03-14T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2018-03-14:/posts/2018-allura-1.8.1.html</id><summary type="html">&lt;p&gt;Version 1.8.1 of Allura released, with many fixes &amp;amp; improvements and a critical security fix.&lt;/p&gt;</summary><content type="html">&lt;h4&gt;New Features&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.8.1 has been released.
+It contains a several improvements around spam prevention and content quality on discussions.  It also includes a few performance optimizations, along with a number of fixes and smaller improvements.  To see all the details, check out the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;release changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Important Security Fix&lt;/h4&gt;
+&lt;p&gt;CVE-2018-1319 Apache Allura HTTP response splitting&lt;/p&gt;
+&lt;p&gt;Severity: Important&lt;br&gt;
+Versions Affected: All&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Attackers may craft URLs that cause HTTP response splitting.  If a victim goes
+to a maliciously crafted URL, unwanted results may occur including XSS or
+service denial for the victim's browsing session.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users of Allura should upgrade to Allura 1.8.1 immediately.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;&lt;br&gt;
+This issue was discovered by Everardo Padilla Saca&lt;/p&gt;
+&lt;h4&gt;Get 1.8.1&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://www.apache.org/dyn/closer.cgi/allura/"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</content><category term="release"></category></entry><entry><title>Apache Allura 1.8.0 released</title><link href="//allura.apache.org/posts/2018-allura-1.8.0.html" rel="alternate"></link><published>2018-02-06T00:00:00+00:00</published><updated>2018-02-06T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2018-02-06:/posts/2018-allura-1.8.0.html</id><summary type="html">&lt;p&gt;Version 1.8.0 of Allura released, with many fixes &amp;amp; improvements and a critical security fix.&lt;/p&gt;</summary><content type="html">&lt;h4&gt;New Features&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.8.0 has been released.
 It contains a Docker setup for production environments, and improved security and auditing around user logins.
 This release also contains a large number of fixes and smaller improvements.  To see all the details, check out the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;release changelog&lt;/a&gt;.&lt;/p&gt;

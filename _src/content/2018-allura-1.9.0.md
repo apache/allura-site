@@ -16,7 +16,7 @@ Of course there are also smaller improvements, fixes, and performances improveme
 The personalized dashboard will show up at the index page for anyone who is logged in.  This provides a comprehensive list of your own tickets and merge requests across all projects, and quick access to relevant projects and activity.  It is extensible so 3rd-party sections can be developed as well, very similarly to the user profile sections.
 
 Here's an example screenshot:
-![Dashboard screenshot]({filename}/images/2018-dashboard.png)
+![Dashboard screenshot]({static}/images/2018-dashboard.png)
 
 
 #### Get 1.9.0

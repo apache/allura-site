@@ -10,6 +10,7 @@ DESCRIPTION = 'Allura is an open source implementation of a software forge, a si
 KEYWORDS = []
 DEFAULT_LANG = 'en'
 LOCALE = 'POSIX'
+TIMEZONE = 'UTC'
 
 PATH = 'content'
 OUTPUT_PATH = '../'
@@ -40,7 +41,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 CATEGORY_FEED_ATOM = None
-TAG_FEED_ATOM = 'feeds/tag.%s.atom.xml'
+TAG_FEED_ATOM = 'feeds/tag.{slug}.atom.xml'
 
 CURRENT_YEAR = dt.date.today().year
 

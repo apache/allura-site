@@ -16,26 +16,26 @@ _Exactly_.
 
 #### Installing a New Tool
 
-<img src="{filename}/images/toolbar/install.gif" class="drop-shadow" width="815" />
+<img src="{static}/images/toolbar/install.gif" class="drop-shadow" width="815" />
 
 The new Admin Toolbar is easy to find and use. There is a “Add New” link on every page, letting you install a new tool from anywhere.  With improved features like tooltips and real-time validation, the updated experience is more intuitive than ever.
 
 #### Tool Options
 
-<img src="{filename}/images/toolbar/edit.gif" class="drop-shadow" width="815" />
+<img src="{static}/images/toolbar/edit.gif" class="drop-shadow" width="815" />
 
 To change any tool settings, use the Lock/Unlock button on the right side of the bar.  This feature makes these options accessible when you need them and inconspicuous when you don’t.  And the gear icon opens up a context menu to manage your tools right from the interface, such as renaming, deleting, or setting specific options.  So you’re always only a few clicks away from all your tool settings.
 
 #### Reordering Tools
 
-<img src="{filename}/images/toolbar/reorder.gif" class="drop-shadow" width="815" />
+<img src="{static}/images/toolbar/reorder.gif" class="drop-shadow" width="815" />
 
 Some key tools are anchored in place, but many tools are movable by dragging and dropping to the desired location.  Just the unlock button, and then drag and drop them into the order you want.  You can even customize the order within sub-menu dropdowns using this method.
 
 
 #### Grouping Similar Tools into Dropdowns
 
-<img src="{filename}/images/toolbar/grouping.gif" class="drop-shadow" width="815"/>
+<img src="{static}/images/toolbar/grouping.gif" class="drop-shadow" width="815"/>
 
 When you have multiple tools of the same type, the Grouping Threshold option is available.  It determines if they will all fit in the navigation bar, or automatically be grouped into a dropdown.
 

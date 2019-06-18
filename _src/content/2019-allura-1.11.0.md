@@ -10,15 +10,15 @@ Apache Allura 1.11.0 has been released, with new features including:
 
 * Reaction support for comments:
 
-![Reaction screenshot]({filename}/images/2019-reactions.png)
+![Reaction screenshot]({static}/images/2019-reactions.png)
 
 * Option to subscribe to forums and other types of threads, when posting
 
-![Subscribe when posting screenshot]({filename}/images/2019-post-subscribe.png)
+![Subscribe when posting screenshot]({static}/images/2019-post-subscribe.png)
 
 * @username mentions in markdown editor
 
-![Username mentioning screenshot]({filename}/images/2019-usernames.png)
+![Username mentioning screenshot]({static}/images/2019-usernames.png)
 
 * Optional HaveIBeenPwned checks for password changes
 

@@ -47,7 +47,9 @@
         <div id="release" class="col-12 auto-margin pad-vert-xs text-center">
           <a href="http://www.apache.org/dyn/closer.cgi/allura/allura-{{ RELEASE_VERSION }}.tar.gz"><button class="auto-margin">Download v{{ RELEASE_VERSION }}</button></a>
           <span class="text-white">{{ RELEASE_DATE }} &mdash;</span>
+          {% if RELEASE_NEWS %}
           <a href="{{ RELEASE_NEWS }}">What's New</a>
+          {% endif %}
           <ul>
             <li class="text-white"><a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha512" class="text-white" download="">sha512 sum</a></li>
             <li class="text-white">PGP <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.asc" class="text-white" download="">signature</a> &amp; <a href="{{ DIST_URL }}KEYS" class="text-white" download="">keys</a></li>

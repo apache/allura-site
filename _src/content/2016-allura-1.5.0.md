@@ -23,4 +23,4 @@ No changes are required unless you wish to use the new rate limiting config.  If
 
 #### Get 1.5.0
 
-[Download Allura](http://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
+[Download Allura](https://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.

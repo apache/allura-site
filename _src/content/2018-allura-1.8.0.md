@@ -31,4 +31,4 @@ This issue was discovered by Everardo Padilla Saca
 
 #### Get 1.8.0
 
-[Download Allura](http://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
+[Download Allura](https://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.

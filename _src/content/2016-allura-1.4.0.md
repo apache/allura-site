@@ -19,6 +19,6 @@ It also works to nest code block notation, and specify the formatting language i
 
 There are also dozens of small fixes and improvements, see the [changelog](https://forge-allura.apache.org/p/allura/git/ci/rel/1.4.0/~/tree/CHANGES) for details.
 
-[Download Allura](http://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
+[Download Allura](https://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
 
 [View the full 1.4.0 Changelog](https://forge-allura.apache.org/p/allura/git/ci/rel/1.4.0/~/tree/CHANGES)

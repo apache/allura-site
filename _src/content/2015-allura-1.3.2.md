@@ -16,6 +16,6 @@ new features are:
   which are generated from the .raml definition files.
 * A site admin (`/nf/admin`) page to permanently delete projects and their data.
 
-[Download Allura](http://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
+[Download Allura](https://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
 
 [View the full 1.3.2 Changelog](https://forge-allura.apache.org/p/allura/git/ci/asf_release_1.3.2/tree/CHANGES)

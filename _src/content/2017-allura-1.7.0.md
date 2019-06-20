@@ -12,4 +12,4 @@ This release also contains numerous small improvements and bug fixes.  To see al
 
 #### Get 1.7.0
 
-[Download Allura](http://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
+[Download Allura](https://www.apache.org/dyn/closer.cgi/allura/) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.

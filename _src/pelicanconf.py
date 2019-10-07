@@ -45,9 +45,9 @@ TAG_FEED_ATOM = 'feeds/tag.{slug}.atom.xml'
 
 CURRENT_YEAR = dt.date.today().year
 
-RELEASE_VERSION = '1.11.1'
-RELEASE_DATE = 'Jul 2019'
-RELEASE_NEWS = 'posts/2019-allura-1.11.1.html'
+RELEASE_VERSION = '1.12.0'
+RELEASE_DATE = 'Oct 2019'
+RELEASE_NEWS = 'posts/2019-allura-1.12.0.html'
 DIST_URL = 'https://apache.org/dist/allura/'
 
 FORGE_ALLURA_URL = 'https://forge-allura.apache.org/'

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% set xxl_header = False %}
+
+{% block content %}
+<div id="about" class="row bg-white pad-vert-xl">
+  <div class="row">
+    <h3 class="text-black text-center">Download Allura</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-20 no-float auto-margin">
+      <div class="row">
+        <p class="pad-md">
+            <a href="https://www.apache.org/dyn/closer.cgi/allura/allura-{{ RELEASE_VERSION }}.tar.gz">Download Allura v{{ RELEASE_VERSION }}</a>.  This is the latest release of Apache Allura, released {{ RELEASE_DATE }}.
+            {% if RELEASE_NEWS %}
+              <a href="{{ RELEASE_NEWS }}">Read what's new.</a>
+            {% endif %}
+        </p>
+        <p>
+            Verify the download:
+        </p>
+        <ul>
+            <li><a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.sha512">SHA-512</a> checksum</li>
+            <li>PGP <a href="{{ DIST_URL }}allura-{{ RELEASE_VERSION }}.tar.gz.asc">signature</a> & <a href="{{ DIST_URL }}KEYS">keys</a></li>
+        </ul>
+        <p>
+            <a href="https://www.apache.org/info/verification.html">Instructions for how to verify a download using these files.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="latest" class="row pad-vert-xl parallax" style="background-position: 0px 0px;">
+  <div class="col-16 no-float auto-margin">
+    <div class="row">
+      <h3 class="text-center">More about Allura</h3>
+      <div class="text-center row text-white">
+          <p class="pad-md">
+            See the <a href="{{ SITEURL }}/">Allura homepage</a> for latest news, instructions, and project information.
+          </p>
+          <p>
+              <a href="http://archive.apache.org/dist/allura/">Archive of older releases</a>
+          </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <div class="row">
+      <div class="col-12 no-float auto-margin">
+      </div>
+      <div class="col-12 no-float auto-margin">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="apache" class="row bg-orange pad-vert-xl">
+  <div class="col-20 no-float auto-margin">
+    <div class="row">
+      <h3 class="text-center">Apache Software Foundation</h3>
+    </div>
+
+    <div class="row">
+      <img class="auto-margin pad-vert-md" src="theme/img/logo-asf-apache.png" alt="apache software foundation logo">
+    </div>
+
+    <div class="row auto-margin button-container">
+      <div class="col-8 pad-vert-sm">
+        <a href="http://www.apache.org/licenses/"><button class="auto-margin">License</button></a>
+      </div>
+
+      <div class="col-8 pad-vert-sm">
+        <a href="http://www.apache.org/foundation/sponsorship.html"><button class="auto-margin">Sponsorship</button></a>
+      </div>
+
+      <div class="col-8 pad-vert-sm">
+        <a href="http://www.apache.org/foundation/thanks.html"><button class="auto-margin">Thanks</button></a>
+      </div>
+    </div>
+    <div class="row auto-margin button-container">
+      <div class="col-12 pad-vert-sm">
+        <a href="http://www.apache.org/security/"><button class="auto-margin">Security</button></a>
+      </div>
+
+      <div class="col-12 pad-vert-sm">
+        <a href="http://www.apache.org/"><button class="auto-margin">Apache™</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

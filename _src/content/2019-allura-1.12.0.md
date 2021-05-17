@@ -25,4 +25,4 @@ Users of Allura should upgrade to Allura 1.12.0
 
 #### Get 1.12.0
 
-[Download Allura]({static}/download.html) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.
+[Download Allura](//allura.apache.org/download.html) and [install it](https://forge-allura.apache.org/docs/getting_started/installation.html) today.

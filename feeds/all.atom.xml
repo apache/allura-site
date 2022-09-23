@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2021-05-17T00:00:00+00:00</updated><entry><title>Apache Allura 1.13.0 released</title><link href="//allura.apache.org/posts/2021-allura-1.13.0.html" rel="alternate"></link><published>2021-05-17T00:00:00+00:00</published><updated>2021-05-17T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2021-05-17:/posts/2021-allura-1.13.0.html</id><summary type="html">&lt;p&gt;Version 1.13.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/all.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2022-09-23T00:00:00+00:00</updated><entry><title>Apache Allura 1.14.0 released</title><link href="//allura.apache.org/posts/2022-allura-1.14.0.html" rel="alternate"></link><published>2022-09-23T00:00:00+00:00</published><updated>2022-09-23T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2022-09-23:/posts/2022-allura-1.14.0.html</id><summary type="html">&lt;p&gt;Version 1.14.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.14.0 has been released, after a long time since 1.13.0.  It includes a new app/tool, SEO improvements
+and a huge list of small fixes and improvements.  The highlights are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added ForgeFiles app for uploading and managing file releases.&lt;/li&gt;
+&lt;li&gt;Many SEO improvements related to links, redirects, canonical and noindex tags.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;release notes&lt;/a&gt;. &lt;/p&gt;
+&lt;h4&gt;Only Python 3.7 supported&lt;/h4&gt;
+&lt;p&gt;This release drops support for Python 2.7 and 3.6, and only supports Python 3.7.&lt;/p&gt;
+&lt;h4&gt;Upgrade Instructions&lt;/h4&gt;
+&lt;p&gt;To install updated dependencies, run: &lt;code&gt;pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Run: &lt;code&gt;./rebuild-all.bash&lt;/code&gt; to get new ForgeFiles app available&lt;/p&gt;
+&lt;p&gt;Run: &lt;code&gt;paster ensure_index development.ini&lt;/code&gt; in Allura dir&lt;/p&gt;
+&lt;p&gt;If switching from Python 3.6 to 3.7, you will need to make a completely new python virtual environment,
+and run &lt;code&gt;pip install ...&lt;/code&gt; in it, and then use it to run Allura.  If you're still on Python 2, you probably should upgrade
+to the previous release 1.13.0 first, following its upgrade instructions, and then switch to Python 3 before doing the 1.14.0 upgrade.&lt;/p&gt;
+&lt;p&gt;If using docker, rebuild the allura image and restart containers.&lt;/p&gt;
+&lt;p&gt;Feel free to ask any questions on the &lt;a href="https://lists.apache.org/list.html?dev@allura.apache.org"&gt;dev mailing list&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Get 1.14.0&lt;/h4&gt;
+&lt;p&gt;&lt;a href="//allura.apache.org/download.html"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</content><category term="misc"></category><category term="release"></category></entry><entry><title>Apache Allura 1.13.0 released</title><link href="//allura.apache.org/posts/2021-allura-1.13.0.html" rel="alternate"></link><published>2021-05-17T00:00:00+00:00</published><updated>2021-05-17T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2021-05-17:/posts/2021-allura-1.13.0.html</id><summary type="html">&lt;p&gt;Version 1.13.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.13.0 has been released, after over a year of development, it includes some major updates and a huge
 list of small fixes and improvements.  Some highlights are:&lt;/p&gt;
 &lt;ul&gt;

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Apache Allura</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>    Apache Allura 1.14.0 released
+</title>
   <meta charset="utf-8">
   <meta name="description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
   <meta name="keywords" content="">
@@ -31,9 +32,12 @@
 
   <link rel="stylesheet" type="text/css" href="//allura.apache.org/theme/css/flex.min.css">
   <link rel="stylesheet" type="text/css" href="//allura.apache.org/theme/css/style.css">
+          <link rel="stylesheet" type="text/css" href="//allura.apache.org/theme/css/article.css">
+
+
 </head>
 
-<body cz-shortcut-listen="true" class="pg-download">
+<body cz-shortcut-listen="true" class="pg-">
   <section id="content_wrapper" class="mobile-desktop row">
     <div id="header" class="row ">
       <header id="login_header" class="row">
@@ -45,92 +49,50 @@
       </header>
     </div>
 
-<div id="about" class="row bg-white pad-vert-xl">
+    <div class="article-content">
+<div class="row bg-white pad-vert-lg">
   <div class="row">
-    <h3 class="text-black text-center">Download Allura</h3>
+    <h3 class="text-black text-center">Apache Allura 1.14.0 released</h3>
+  </div>
+
+  <div class="post-info text-center">
+    Published:
+    <abbr class="published" title="2022-09-23T00:00:00+00:00">
+      Fri 23 September 2022
+    </abbr>
+    <br>
+    Tagged:
+        <a href="//allura.apache.org/tag/release.html">release</a>
   </div>
 
   <div class="row">
     <div class="col-20 no-float auto-margin">
       <div class="row">
-        <p class="pad-md">
-            <a href="https://www.apache.org/dyn/closer.cgi/allura/allura-1.14.0.tar.gz">Download Allura v1.14.0</a>.  This is the latest release of Apache Allura, released Sep 2022.
-              <a href="posts/2022-allura-1.14.0.html">Read what's new.</a>
-        </p>
-        <p>
-            Verify the download:
-        </p>
-        <ul>
-            <li><a href="https://downloads.apache.org/allura/allura-1.14.0.tar.gz.sha512">SHA-512</a> checksum</li>
-            <li>PGP <a href="https://downloads.apache.org/allura/allura-1.14.0.tar.gz.asc">signature</a> & <a href="https://downloads.apache.org/allura/KEYS">keys</a></li>
-        </ul>
-        <p>
-            <a href="https://www.apache.org/info/verification.html">Instructions for how to verify a download using these files.</a>
-        </p>
+        <div class="pad-md text-black"><h4>What's New?</h4>
+<p>Apache Allura 1.14.0 has been released, after a long time since 1.13.0.  It includes a new app/tool, SEO improvements
+and a huge list of small fixes and improvements.  The highlights are:</p>
+<ul>
+<li>Added ForgeFiles app for uploading and managing file releases.</li>
+<li>Many SEO improvements related to links, redirects, canonical and noindex tags.</li>
+</ul>
+<p>For full details of all the changes and fixes, see the <a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES">release notes</a>. </p>
+<h4>Only Python 3.7 supported</h4>
+<p>This release drops support for Python 2.7 and 3.6, and only supports Python 3.7.</p>
+<h4>Upgrade Instructions</h4>
+<p>To install updated dependencies, run: <code>pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed</code></p>
+<p>Run: <code>./rebuild-all.bash</code> to get new ForgeFiles app available</p>
+<p>Run: <code>paster ensure_index development.ini</code> in Allura dir</p>
+<p>If switching from Python 3.6 to 3.7, you will need to make a completely new python virtual environment,
+and run <code>pip install ...</code> in it, and then use it to run Allura.  If you're still on Python 2, you probably should upgrade
+to the previous release 1.13.0 first, following its upgrade instructions, and then switch to Python 3 before doing the 1.14.0 upgrade.</p>
+<p>If using docker, rebuild the allura image and restart containers.</p>
+<p>Feel free to ask any questions on the <a href="https://lists.apache.org/list.html?dev@allura.apache.org">dev mailing list</a>.</p>
+<h4>Get 1.14.0</h4>
+<p><a href="//allura.apache.org/download.html">Download Allura</a> and <a href="https://forge-allura.apache.org/docs/getting_started/installation.html">install it</a> today.</p></div>
       </div>
     </div>
   </div>
 </div>
-
-<div id="latest" class="row pad-vert-xl parallax" style="background-position: 0px 0px;">
-  <div class="col-16 no-float auto-margin">
-    <div class="row">
-      <h3 class="text-center">More about Allura</h3>
-      <div class="text-center row text-white">
-          <p class="pad-md">
-            See the <a href="//allura.apache.org/">Allura homepage</a> for latest news, instructions, and project information.
-          </p>
-          <p>
-              <a href="http://archive.apache.org/dist/allura/">Archive of older releases</a>
-          </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-8">
-    <div class="row">
-      <div class="col-12 no-float auto-margin">
-      </div>
-      <div class="col-12 no-float auto-margin">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="apache" class="row bg-orange pad-vert-xl">
-  <div class="col-20 no-float auto-margin">
-    <div class="row">
-      <h3 class="text-center">Apache Software Foundation</h3>
-    </div>
-
-    <div class="row">
-      <img class="auto-margin pad-vert-md" src="theme/img/logo-asf-apache.png" alt="apache software foundation logo">
-    </div>
-
-    <div class="row auto-margin button-container">
-      <div class="col-8 pad-vert-sm">
-        <a href="http://www.apache.org/licenses/"><button class="auto-margin">License</button></a>
-      </div>
-
-      <div class="col-8 pad-vert-sm">
-        <a href="http://www.apache.org/foundation/sponsorship.html"><button class="auto-margin">Sponsorship</button></a>
-      </div>
-
-      <div class="col-8 pad-vert-sm">
-        <a href="http://www.apache.org/foundation/thanks.html"><button class="auto-margin">Thanks</button></a>
-      </div>
-    </div>
-    <div class="row auto-margin button-container">
-      <div class="col-12 pad-vert-sm">
-        <a href="http://www.apache.org/security/"><button class="auto-margin">Security</button></a>
-      </div>
-
-      <div class="col-12 pad-vert-sm">
-        <a href="http://www.apache.org/"><button class="auto-margin">Apache™</button></a>
-      </div>
-    </div>
-  </div>
 </div>
 
     <div class="row">
@@ -144,6 +106,7 @@
 
   <script type="application/javascript" src="//allura.apache.org/theme/js/jquery-1.11.2.min.js"></script>
   <script type="application/javascript" src="//allura.apache.org/theme/js/frontend.js"></script>
+        <script type="application/javascript" src="//allura.apache.org/theme/js/article.js"></script>
   <!-- Credits
 
           Logo Design: Will Leonard

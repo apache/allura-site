@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2022-09-23T00:00:00+00:00</updated><entry><title>Apache Allura 1.14.0 released</title><link href="//allura.apache.org/posts/2022-allura-1.14.0.html" rel="alternate"></link><published>2022-09-23T00:00:00+00:00</published><updated>2022-09-23T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2022-09-23:/posts/2022-allura-1.14.0.html</id><summary type="html">&lt;p&gt;Version 1.14.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2023-09-18T00:00:00+00:00</updated><entry><title>Apache Allura 1.15.0 released</title><link href="//allura.apache.org/posts/2023-allura-1.15.0.html" rel="alternate"></link><published>2023-09-18T00:00:00+00:00</published><updated>2023-09-18T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2023-09-18:/posts/2023-allura-1.15.0.html</id><summary type="html">&lt;p&gt;Version 1.15.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.15.0 has been released, after a long time since 1.14.0.  This release adds support for more Python versions (see next section) and Content-Security-Policy headers.  Many other fixes and improvements are also included, they relate to SEO, performance and different parts of Allura.&lt;/p&gt;
+&lt;p&gt;For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;
+&lt;h4&gt;Python 3.7 through 3.11 supported&lt;/h4&gt;
+&lt;p&gt;This release supports Python 3.7 through Python 3.11&lt;/p&gt;
+&lt;p&gt;The next release will drop support for Python 3.7 so please upgrade your Python version soon, to stay compatible with future Allura releases.&lt;/p&gt;
+&lt;h4&gt;Upgrade Instructions&lt;/h4&gt;
+&lt;p&gt;To install updated dependencies, run: &lt;code&gt;pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Run: &lt;code&gt;paster ensure_index development.ini&lt;/code&gt; in Allura dir&lt;/p&gt;
+&lt;p&gt;If switching to a new version of Python, you will need to make a completely new python virtual environment,
+and run &lt;code&gt;pip install ...&lt;/code&gt; in it, and then use it to run Allura.&lt;/p&gt;
+&lt;p&gt;If using docker, rebuild the allura image and restart containers.&lt;/p&gt;
+&lt;p&gt;Feel free to ask any questions on the &lt;a href="https://lists.apache.org/list.html?dev@allura.apache.org"&gt;dev mailing list&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Get 1.15.0&lt;/h4&gt;
+&lt;p&gt;&lt;a href="//allura.apache.org/download.html"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</content><category term="misc"></category><category term="release"></category></entry><entry><title>Apache Allura 1.14.0 released</title><link href="//allura.apache.org/posts/2022-allura-1.14.0.html" rel="alternate"></link><published>2022-09-23T00:00:00+00:00</published><updated>2022-09-23T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2022-09-23:/posts/2022-allura-1.14.0.html</id><summary type="html">&lt;p&gt;Version 1.14.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.14.0 has been released, after a long time since 1.13.0.  It includes a new app/tool, SEO improvements
 and a huge list of small fixes and improvements.  The highlights are:&lt;/p&gt;
 &lt;ul&gt;

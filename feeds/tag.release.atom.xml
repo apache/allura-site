@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2023-09-18T00:00:00+00:00</updated><entry><title>Apache Allura 1.15.0 released</title><link href="//allura.apache.org/posts/2023-allura-1.15.0.html" rel="alternate"></link><published>2023-09-18T00:00:00+00:00</published><updated>2023-09-18T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2023-09-18:/posts/2023-allura-1.15.0.html</id><summary type="html">&lt;p&gt;Version 1.15.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="//allura.apache.org/" rel="alternate"></link><link href="//allura.apache.org/feeds/tag.release.atom.xml" rel="self"></link><id>//allura.apache.org/</id><updated>2023-11-06T00:00:00+00:00</updated><entry><title>Apache Allura 1.16.0 released with critical security fix</title><link href="//allura.apache.org/posts/2023-allura-1.16.0.html" rel="alternate"></link><published>2023-11-06T00:00:00+00:00</published><updated>2023-11-06T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2023-11-06:/posts/2023-allura-1.16.0.html</id><summary type="html">&lt;p&gt;Version 1.16.0 of Allura released with critical security fix&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.16.0 has been released.  It has a critical security fix and also drops Python 3.7 support.&lt;/p&gt;
+&lt;p&gt;For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;
+&lt;h4&gt;Critical Security Fix&lt;/h4&gt;
+&lt;p&gt;CVE-2023-46851 sensitive information exposure via import &lt;/p&gt;
+&lt;p&gt;Severity: Critical&lt;br&gt;
+Versions Affected: 1.0.1 through 1.15.0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Allura Discussion and Allura Forum importing does not restrict URL values specified in attachments. Project administrators can run these imports, which could cause Allura to read local files and expose them.  Exposing internal files then can lead to other exploits, like session hijacking, or remote code execution.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users of Allura should upgrade to Allura 1.16.0 immediately.&lt;/p&gt;
+&lt;p&gt;If you are unable to upgrade, set this in your .ini config file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;disable_entry_points.allura.importers = forge-tracker, forge-discussion
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That same .ini setting is also recommend for users who want maximum security on their Allura instance and don't need those importers available.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;&lt;br&gt;
+This issue was discovered by Stefan Schiller (Sonar)&lt;/p&gt;
+&lt;h4&gt;Python 3.8 through 3.11 supported&lt;/h4&gt;
+&lt;p&gt;This release drops support for Python 3.7 and supports Python 3.8 through Python 3.11&lt;/p&gt;
+&lt;h4&gt;Upgrade Instructions&lt;/h4&gt;
+&lt;p&gt;To install updated dependencies, run: &lt;code&gt;pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Run: &lt;code&gt;paster ensure_index development.ini&lt;/code&gt; in Allura dir&lt;/p&gt;
+&lt;p&gt;If switching to a new version of Python, you will need to make a completely new python virtual environment,
+and run &lt;code&gt;pip install ...&lt;/code&gt; in it, and then use it to run Allura.&lt;/p&gt;
+&lt;p&gt;If using docker, rebuild the allura image and restart containers.&lt;/p&gt;
+&lt;p&gt;Feel free to ask any questions on the &lt;a href="https://lists.apache.org/list.html?dev@allura.apache.org"&gt;dev mailing list&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Get 1.16.0&lt;/h4&gt;
+&lt;p&gt;&lt;a href="//allura.apache.org/download.html"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</content><category term="misc"></category><category term="release"></category></entry><entry><title>Apache Allura 1.15.0 released</title><link href="//allura.apache.org/posts/2023-allura-1.15.0.html" rel="alternate"></link><published>2023-09-18T00:00:00+00:00</published><updated>2023-09-18T00:00:00+00:00</updated><author><name></name></author><id>tag:allura.apache.org,2023-09-18:/posts/2023-allura-1.15.0.html</id><summary type="html">&lt;p&gt;Version 1.15.0 of Allura released&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.15.0 has been released, after a long time since 1.14.0.  This release adds support for more Python versions (see next section) and Content-Security-Policy headers.  Many other fixes and improvements are also included, they relate to SEO, performance and different parts of Allura.&lt;/p&gt;
 &lt;p&gt;For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;
 &lt;h4&gt;Python 3.7 through 3.11 supported&lt;/h4&gt;

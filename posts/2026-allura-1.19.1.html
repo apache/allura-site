@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>    Apache Allura 1.5.0 released
+  <title>    Apache Allura 1.19.1 released, with many security fixes
 </title>
   <meta charset="utf-8">
   <meta name="description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
@@ -49,13 +49,13 @@
     <div class="article-content">
 <div class="row bg-white pad-vert-lg">
   <div class="row">
-    <h3 class="text-black text-center">Apache Allura 1.5.0 released</h3>
+    <h3 class="text-black text-center">Apache Allura 1.19.1 released, with many security fixes</h3>
   </div>
 
   <div class="post-info text-center">
     Published:
-    <abbr class="published" title="2016-08-23T00:00:00+00:00">
-      Tue 23 August 2016
+    <abbr class="published" title="2026-06-29T00:00:00+00:00">
+      Mon 29 June 2026
     </abbr>
     <br>
     Tagged:
@@ -65,19 +65,37 @@
   <div class="row">
     <div class="col-20 no-float auto-margin">
       <div class="row">
-        <div class="pad-md text-black"><h4>New Features</h4>
-<p>Apache Allura 1.5.0 has been released.  Major new features include a guided tour after project registration,
-improved design for discussions and their attachments, and various usability improvements for merge requests.  Many
-of the changes came from work done during Google Summer of Code.</p>
-<p>See our <a href="https://allura.apache.org/posts/2016-gsoc-16.html">Google Summer of Code Summary</a> for details on all those changes.</p>
-<p>There are lots of other fixes and improvements, see the <a href="https://forge-allura.apache.org/p/allura/git/ci/rel/1.5.0/~/tree/CHANGES">changelog</a> for details.</p>
-<h4>Upgrade notes</h4>
-<p>No changes are required unless you wish to use the new rate limiting config.  If so, copy all the new
-"rate_limits" settings from <code>development.ini</code> into your <code>.ini</code> file and configure appropriate values.  Then run
-<code>paster ensure_index development.ini</code>.  Or if you are using Docker, run:
-<code>docker-compose run taskd paster ensure_index docker-dev.ini</code></p>
-<h4>Get 1.5.0</h4>
-<p><a href="https://www.apache.org/dyn/closer.cgi/allura/">Download Allura</a> and <a href="https://forge-allura.apache.org/docs/getting_started/installation.html">install it</a> today.</p></div>
+        <div class="pad-md text-black"><h4>What's New?</h4>
+<p>Apache Allura 1.19.1 has been released.  (Version 1.19.0 was skipped)</p>
+<p><strong>Security: a large number of security fixes have been applied, as well as general security hardening in many areas.
+We recommend upgrading immediately.</strong></p>
+<p>Field-level encryption of sensitive fields has begun, for some fields.  Future releases will add more fields.</p>
+<p>Support for Python 3.13 and 3.14 has been added.</p>
+<p>Various other changes, fixes, and performancement impovements are also in this release.  For full details of all the changes and fixes, see the <a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES">CHANGES file</a>. </p>
+<h4>Breaking Changes</h4>
+<p>Python 3.9 and 3.10 are no longer supported.  Python 3.11 through 3.14 are supported in this release.</p>
+<h4>Upgrade Instructions</h4>
+<p>Stop any running Allura services while upgrading.</p>
+<p>Install updated dependencies by running: <code>pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed</code></p>
+<p>In your .ini file, set <code>csp.form_action_urls</code> to your base URL.</p>
+<p>In your .ini file, enable or disable importers like Trac importer as you see fit (see <code>disable_entry_points</code> lines in <code>development.ini</code>)</p>
+<p>Field-level mongo encryption setup:</p>
+<ul>
+<li>Copy the new <code>ming.*encryption*</code> lines from development.ini to your own .ini file. </li>
+<li>Generate a secret key with: python -c 'import base64, secrets; print(base64.b64encode(secrets.token_bytes(96)).decode())'</li>
+<li>Put that secret key in your .ini file in 3 spots:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    ming.main.encryption.kms_providers.local.key = ...
+    ming.project.encryption.kms_providers.local.key = ...
+    ming.task.encryption.kms_providers.local.key = ...
+</code></pre></div>
+
+<p>Run <code>scripts/migrations/035-field-encryption.sh</code>  If using docker, this is the full command (replace your .ini file path): <code>docker compose run -e INI=docker-dev.ini --rm taskd ../scripts/migrations/035-field-encryption.sh</code></p>
+<p>Run: <code>paster ensure_index development.ini --clean</code> in Allura dir.  Replace your .ini file path</p>
+<p>After the new version of Allura is up and running, delete the plaintext versions of the encrypted fields by running <code>scripts/migrations/036-field-encryption-cleanup.sh</code></p>
+<p>Feel free to ask any questions on the <a href="https://lists.apache.org/list.html?dev@allura.apache.org">dev mailing list</a>.</p>
+<h4>Get 1.19.1</h4>
+<p><a href="https://allura.apache.org/download.html">Download Allura</a> and <a href="https://forge-allura.apache.org/docs/getting_started/installation.html">install it</a> today.</p></div>
       </div>
     </div>
   </div>

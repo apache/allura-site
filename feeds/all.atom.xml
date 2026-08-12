@@ -2,7 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura</title><link href="https://allura.apache.org/" rel="alternate"/><link href="https://allura.apache.org/feeds/all.atom.xml" rel="self"/><id>https://allura.apache.org/</id><updated>2026-06-29T00:00:00+00:00</updated><entry><title>Apache Allura 1.19.1 released, with many security fixes</title><link href="https://allura.apache.org/posts/2026-allura-1.19.1.html" rel="alternate"/><published>2026-06-29T00:00:00+00:00</published><updated>2026-06-29T00:00:00+00:00</updated><author><name/></author><id>tag:allura.apache.org,2026-06-29:/posts/2026-allura-1.19.1.html</id><summary type="html">&lt;p&gt;Version 1.19.1 of Allura released, with many security fixes&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.19.1 has been released.  (Version 1.19.0 was skipped)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Security: a large number of security fixes have been applied, as well as general security hardening in many areas.
-We recommend upgrading immediately.&lt;/strong&gt;&lt;/p&gt;
+We recommend upgrading immediately.  These include the following CVEs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-69223"&gt;CVE-2026-69223&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-73237"&gt;CVE-2026-73237&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-73238"&gt;CVE-2026-73238&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-73239"&gt;CVE-2026-73239&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-73240"&gt;CVE-2026-73240&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Field-level encryption of sensitive fields has begun, for some fields.  Future releases will add more fields.&lt;/p&gt;
 &lt;p&gt;Support for Python 3.13 and 3.14 has been added.&lt;/p&gt;
 &lt;p&gt;Various other changes, fixes, and performancement impovements are also in this release.  For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;

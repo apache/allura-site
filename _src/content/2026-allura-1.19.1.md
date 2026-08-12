@@ -9,7 +9,13 @@ Summary: Version 1.19.1 of Allura released, with many security fixes
 Apache Allura 1.19.1 has been released.  (Version 1.19.0 was skipped)
 
 **Security: a large number of security fixes have been applied, as well as general security hardening in many areas.
-We recommend upgrading immediately.**
+We recommend upgrading immediately.  These include the following CVEs:**
+
+* [CVE-2026-69223](https://www.cve.org/CVERecord?id=CVE-2026-69223)
+* [CVE-2026-73237](https://www.cve.org/CVERecord?id=CVE-2026-73237)
+* [CVE-2026-73238](https://www.cve.org/CVERecord?id=CVE-2026-73238)
+* [CVE-2026-73239](https://www.cve.org/CVERecord?id=CVE-2026-73239)
+* [CVE-2026-73240](https://www.cve.org/CVERecord?id=CVE-2026-73240)
 
 Field-level encryption of sensitive fields has begun, for some fields.  Future releases will add more fields.
 

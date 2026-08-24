@@ -21,7 +21,7 @@ Field-level encryption of sensitive fields has begun, for some fields.  Future r
 
 Support for Python 3.13 and 3.14 has been added.
 
-Various other changes, fixes, and performancement impovements are also in this release.  For full details of all the changes and fixes, see the [CHANGES file](https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES). 
+Various other changes, fixes, and performance improvements are also in this release.  For full details of all the changes and fixes, see the [CHANGES file](https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES). 
 
 #### Breaking Changes
 

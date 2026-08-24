@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Apache Allura</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>    Apache Allura 1.20.0 released, with security fix
+</title>
   <meta charset="utf-8">
   <meta name="description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
   <meta name="keywords" content="">
@@ -28,9 +29,12 @@
 
   <link rel="stylesheet" type="text/css" href="https://allura.apache.org/theme/css/flex.min.css">
   <link rel="stylesheet" type="text/css" href="https://allura.apache.org/theme/css/style.css">
+          <link rel="stylesheet" type="text/css" href="https://allura.apache.org/theme/css/article.css">
+
+
 </head>
 
-<body cz-shortcut-listen="true" class="pg-download">
+<body cz-shortcut-listen="true" class="pg-">
   <section id="content_wrapper" class="mobile-desktop row">
     <div id="header" class="row ">
       <header id="login_header" class="row">
@@ -42,96 +46,53 @@
       </header>
     </div>
 
-<div id="about" class="row bg-white pad-vert-xl">
+    <div class="article-content">
+<div class="row bg-white pad-vert-lg">
   <div class="row">
-    <h3 class="text-black text-center">Download Allura</h3>
+    <h3 class="text-black text-center">Apache Allura 1.20.0 released, with security fix</h3>
+  </div>
+
+  <div class="post-info text-center">
+    Published:
+    <abbr class="published" title="2026-08-24T00:00:00+00:00">
+      Mon 24 August 2026
+    </abbr>
+    <br>
+    Tagged:
+        <a href="https://allura.apache.org/tag/release.html">release</a>
   </div>
 
   <div class="row">
     <div class="col-20 no-float auto-margin">
       <div class="row">
-        <p class="pad-md">
-            <a href="https://www.apache.org/dyn/closer.cgi/allura/allura-1.20.0.tar.gz">Download Allura v1.20.0</a>.  This is the latest release of Apache Allura, released August 2026.
-              <a href="posts/2026-allura-1.20.0.html">Read what's new.</a>
-        </p>
-        <p>
-            Verify the download:
-        </p>
-        <ul>
-            <li><a href="https://downloads.apache.org/allura/allura-1.20.0.tar.gz.sha512">SHA-512</a> checksum</li>
-            <li>PGP <a href="https://downloads.apache.org/allura/allura-1.20.0.tar.gz.asc">signature</a> & <a href="https://downloads.apache.org/allura/KEYS">keys</a></li>
-        </ul>
-        <p>
-            <a href="https://www.apache.org/info/verification.html">Instructions for how to verify a download using these files.</a>
-        </p>
+        <div class="pad-md text-black"><h4>What's New?</h4>
+<p>Apache Allura 1.20.0 has been released.</p>
+<h4>Security Fix</h4>
+<p>CVE-2026-75099: Unauthenticated REST disclosure </p>
+<p>Severity: important<br></p>
+<p><strong>Description:</strong><br>
+Unauthenticated REST disclosure of certain content items in Apache Allura.</p>
+<p>This issue affects Apache Allura through 1.19.1.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 1.20.0, which fixes the issue.</p>
+<p><strong>Credit:</strong><br>
+This issue was discovered by Venkatraman Kumar, securin.io.</p>
+<h4>Other Changes</h4>
+<p>Field-level encryption of sensitive fields has continued, adding email addresses and some IP addresses in this release.</p>
+<p>Support for webp screenshots &amp; attachments has been added, and some rss/atom changes, and more.  For full details of all the changes and fixes, see the <a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES">CHANGES file</a>. </p>
+<h4>Upgrade Instructions</h4>
+<p>Upgrade to prior release(s) first.  Stop any running Allura services while upgrading.</p>
+<p>Install updated dependencies by running: <code>pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed</code></p>
+<p>Run <code>scripts/migrations/037-field-encryption.sh</code>  If using docker, this is the full command (replace your .ini file path): <code>docker compose run -e INI=docker-dev.ini --rm taskd ../scripts/migrations/037-field-encryption.sh</code></p>
+<p>Run: <code>paster ensure_index development.ini --clean</code> in Allura dir.  Replace your .ini file path</p>
+<p>After the new version of Allura is up and running, delete the plaintext versions of the encrypted fields by running <code>scripts/migrations/038-field-encryption-cleanup.sh</code></p>
+<p>Feel free to ask any questions on the <a href="https://lists.apache.org/list.html?dev@allura.apache.org">dev mailing list</a>.</p>
+<h4>Get 1.20.0</h4>
+<p><a href="https://allura.apache.org/download.html">Download Allura</a> and <a href="https://forge-allura.apache.org/docs/getting_started/installation.html">install it</a> today.</p></div>
       </div>
     </div>
   </div>
 </div>
-
-<div id="latest" class="row pad-vert-xl parallax" style="background-position: 0px 0px;">
-  <div class="col-16 no-float auto-margin">
-    <div class="row">
-      <h3 class="text-center">More about Allura</h3>
-      <div class="text-center row text-white">
-          <p class="pad-md">
-            See the <a href="https://allura.apache.org/">Allura homepage</a> for latest news, instructions, and project information.
-          </p>
-          <p>
-              <a href="https://archive.apache.org/dist/allura/">Archive of older releases</a>
-          </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-8">
-    <div class="row">
-      <div class="col-12 no-float auto-margin">
-      </div>
-      <div class="col-12 no-float auto-margin">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="apache" class="row bg-orange pad-vert-xl">
-  <div class="col-20 no-float auto-margin">
-    <div class="row">
-      <h3 class="text-center">Apache Software Foundation</h3>
-    </div>
-
-    <div class="row">
-      <img class="auto-margin pad-vert-md" src="https://www.apache.org/img/asf_logo.png" alt="apache software foundation logo">
-    </div>
-
-    <div class="row auto-margin button-container">
-      <div class="col-8 pad-vert-sm">
-        <a href="https://www.apache.org/licenses/"><button class="auto-margin">License</button></a>
-      </div>
-
-      <div class="col-8 pad-vert-sm">
-        <a href="https://www.apache.org/foundation/sponsorship.html"><button class="auto-margin">Sponsorship</button></a>
-      </div>
-
-      <div class="col-8 pad-vert-sm">
-        <a href="https://www.apache.org/foundation/thanks.html"><button class="auto-margin">Thanks</button></a>
-      </div>
-    </div>
-    <div class="row auto-margin button-container">
-      <div class="col-8 pad-vert-sm">
-        <a href="https://www.apache.org/security/"><button class="auto-margin">Security</button></a>
-      </div>
-
-      <div class="col-8 pad-vert-sm">
-        <a href="https://privacy.apache.org/policies/privacy-policy-public.html"><button class="auto-margin">Privacy Policy</button></a>
-      </div>
-
-      <div class="col-8 pad-vert-sm">
-        <a href="https://www.apache.org/"><button class="auto-margin">Apache™</button></a>
-      </div>
-    </div>
-  </div>
 </div>
 
     <div class="row">
@@ -145,6 +106,7 @@
 
   <script type="application/javascript" src="https://allura.apache.org/theme/js/jquery-1.11.2.min.js"></script>
   <script type="application/javascript" src="https://allura.apache.org/theme/js/frontend.js"></script>
+        <script type="application/javascript" src="https://allura.apache.org/theme/js/article.js"></script>
   <!-- Credits
 
           Logo Design: Will Leonard

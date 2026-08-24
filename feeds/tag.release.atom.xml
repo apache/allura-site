@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="https://allura.apache.org/" rel="alternate"/><link href="https://allura.apache.org/feeds/tag.release.atom.xml" rel="self"/><id>https://allura.apache.org/</id><updated>2026-06-29T00:00:00+00:00</updated><entry><title>Apache Allura 1.19.1 released, with many security fixes</title><link href="https://allura.apache.org/posts/2026-allura-1.19.1.html" rel="alternate"/><published>2026-06-29T00:00:00+00:00</published><updated>2026-06-29T00:00:00+00:00</updated><author><name/></author><id>tag:allura.apache.org,2026-06-29:/posts/2026-allura-1.19.1.html</id><summary type="html">&lt;p&gt;Version 1.19.1 of Allura released, with many security fixes&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="https://allura.apache.org/" rel="alternate"/><link href="https://allura.apache.org/feeds/tag.release.atom.xml" rel="self"/><id>https://allura.apache.org/</id><updated>2026-08-24T00:00:00+00:00</updated><entry><title>Apache Allura 1.20.0 released, with security fix</title><link href="https://allura.apache.org/posts/2026-allura-1.20.0.html" rel="alternate"/><published>2026-08-24T00:00:00+00:00</published><updated>2026-08-24T00:00:00+00:00</updated><author><name/></author><id>tag:allura.apache.org,2026-08-24:/posts/2026-allura-1.20.0.html</id><summary type="html">&lt;p&gt;Version 1.20.0 of Allura released, with security fix&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.20.0 has been released.&lt;/p&gt;
+&lt;h4&gt;Security Fix&lt;/h4&gt;
+&lt;p&gt;CVE-2026-75099: Unauthenticated REST disclosure &lt;/p&gt;
+&lt;p&gt;Severity: important&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Unauthenticated REST disclosure of certain content items in Apache Allura.&lt;/p&gt;
+&lt;p&gt;This issue affects Apache Allura through 1.19.1.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users are recommended to upgrade to version 1.20.0, which fixes the issue.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;&lt;br&gt;
+This issue was discovered by Venkatraman Kumar, securin.io.&lt;/p&gt;
+&lt;h4&gt;Other Changes&lt;/h4&gt;
+&lt;p&gt;Field-level encryption of sensitive fields has continued, adding email addresses and some IP addresses in this release.&lt;/p&gt;
+&lt;p&gt;Support for webp screenshots &amp;amp; attachments has been added, and some rss/atom changes, and more.  For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;
+&lt;h4&gt;Upgrade Instructions&lt;/h4&gt;
+&lt;p&gt;Upgrade to prior release(s) first.  Stop any running Allura services while upgrading.&lt;/p&gt;
+&lt;p&gt;Install updated dependencies by running: &lt;code&gt;pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Run &lt;code&gt;scripts/migrations/037-field-encryption.sh&lt;/code&gt;  If using docker, this is the full command (replace your .ini file path): &lt;code&gt;docker compose run -e INI=docker-dev.ini --rm taskd ../scripts/migrations/037-field-encryption.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Run: &lt;code&gt;paster ensure_index development.ini --clean&lt;/code&gt; in Allura dir.  Replace your .ini file path&lt;/p&gt;
+&lt;p&gt;After the new version of Allura is up and running, delete the plaintext versions of the encrypted fields by running &lt;code&gt;scripts/migrations/038-field-encryption-cleanup.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Feel free to ask any questions on the &lt;a href="https://lists.apache.org/list.html?dev@allura.apache.org"&gt;dev mailing list&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Get 1.20.0&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://allura.apache.org/download.html"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</content><category term="misc"/><category term="release"/></entry><entry><title>Apache Allura 1.19.1 released, with many security fixes</title><link href="https://allura.apache.org/posts/2026-allura-1.19.1.html" rel="alternate"/><published>2026-06-29T00:00:00+00:00</published><updated>2026-06-29T00:00:00+00:00</updated><author><name/></author><id>tag:allura.apache.org,2026-06-29:/posts/2026-allura-1.19.1.html</id><summary type="html">&lt;p&gt;Version 1.19.1 of Allura released, with many security fixes&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.19.1 has been released.  (Version 1.19.0 was skipped)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Security: a large number of security fixes have been applied, as well as general security hardening in many areas.
 We recommend upgrading immediately.  These include the following CVEs:&lt;/strong&gt;&lt;/p&gt;
@@ -12,7 +35,7 @@ We recommend upgrading immediately.  These include the following CVEs:&lt;/stron
 &lt;/ul&gt;
 &lt;p&gt;Field-level encryption of sensitive fields has begun, for some fields.  Future releases will add more fields.&lt;/p&gt;
 &lt;p&gt;Support for Python 3.13 and 3.14 has been added.&lt;/p&gt;
-&lt;p&gt;Various other changes, fixes, and performancement impovements are also in this release.  For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Various other changes, fixes, and performance improvements are also in this release.  For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;
 &lt;h4&gt;Breaking Changes&lt;/h4&gt;
 &lt;p&gt;Python 3.9 and 3.10 are no longer supported.  Python 3.11 through 3.14 are supported in this release.&lt;/p&gt;
 &lt;h4&gt;Upgrade Instructions&lt;/h4&gt;

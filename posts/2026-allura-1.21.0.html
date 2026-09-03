@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>    Apache Allura 1.21.0 released, with security fixes
+</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="canonical" href="https://allura.apache.org">
+
+  <!--    Facebook Meta Info-->
+  <meta property="og:url" content="https://allura.apache.org">
+  <meta property="og:description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
+  <meta property="og:title" content="Apache Allura">
+  <meta property="og:site_name" content="Apache Allura">
+  <meta property="og:see_also" content="https://allura.apache.org">
+
+  <!--    Twitter Meta Info-->
+  <meta name="twitter:card" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
+  <meta name="twitter:url" content="https://allura.apache.org">
+  <meta name="twitter:title" content="Apache Allura">
+  <meta name="twitter:description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
+
+  <!--    Google+ Meta Info-->
+  <meta itemprop="name" content="Apache Allura">
+  <meta itemprop="description" content="Allura is an open source implementation of a software forge, a site that manages source code repositories, bug reports, discussions, and more for projects.">
+
+  <link rel="stylesheet" type="text/css" href="https://allura.apache.org/theme/css/flex.min.css">
+  <link rel="stylesheet" type="text/css" href="https://allura.apache.org/theme/css/style.css">
+          <link rel="stylesheet" type="text/css" href="https://allura.apache.org/theme/css/article.css">
+
+
+</head>
+
+<body cz-shortcut-listen="true" class="pg-">
+  <section id="content_wrapper" class="mobile-desktop row">
+    <div id="header" class="row ">
+      <header id="login_header" class="row">
+        <div class="bg-shadow pad-vert-md">
+          <span><h1 class="text-center"><a href="https://allura.apache.org">Apache <img src="https://allura.apache.org/theme/img/logo_white.png" width="94"> Allura<span class="tm">™</span></a></h1></span>
+          <span></span>
+          <h6 class="text-center">Open source project hosting platform</h6>
+        </div>
+      </header>
+    </div>
+
+    <div class="article-content">
+<div class="row bg-white pad-vert-lg">
+  <div class="row">
+    <h3 class="text-black text-center">Apache Allura 1.21.0 released, with security fixes</h3>
+  </div>
+
+  <div class="post-info text-center">
+    Published:
+    <abbr class="published" title="2026-09-03T00:00:00+00:00">
+      Thu 03 September 2026
+    </abbr>
+    <br>
+    Tagged:
+        <a href="https://allura.apache.org/tag/release.html">release</a>
+  </div>
+
+  <div class="row">
+    <div class="col-20 no-float auto-margin">
+      <div class="row">
+        <div class="pad-md text-black"><h4>What's New?</h4>
+<p>Apache Allura 1.21.0 has been released.</p>
+<h4>Security Fixes</h4>
+<h5>CVE-2026-80180: Stored XSS via markdown HTML processing</h5>
+<p>Severity: critical<br></p>
+<p><strong>Description:</strong><br>
+Stored XSS via markdown HTML processing in Apache Allura.</p>
+<p>This issue affects Apache Allura: from through 1.20.0.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 1.21.0, which fixes the issue.</p>
+<p><strong>Credit:</strong><br>
+This issue was discovered by n0mi1k.</p>
+<h5>CVE-2026-80181: Server-side request forgery</h5>
+<p>Severity: important<br></p>
+<p><strong>Description:</strong><br>
+Apache Allura's webhooks are vulnerable to Server-Side Request Forgery (SSRF).</p>
+<p>This issue affects Apache Allura: through 1.20.0.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 1.21.0, which fixes the issue.</p>
+<p><strong>Credit:</strong><br>
+This issue was discovered by n0mi1k.</p>
+<h5>CVE-2026-81270: Information exposure via search</h5>
+<p>Severity: moderate<br></p>
+<p><strong>Description:</strong><br>
+Apache Allura: exposure of non-public information via search.</p>
+<p>This issue affects Apache Allura: through 1.20.0.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 1.21.0, which fixes the issue.</p>
+<p><strong>Credit:</strong><br>
+This issue was discovered by n0mi1k.</p>
+<h5>CVE-2026-80190: Stored XSS via code repositories</h5>
+<p>Severity: low<br></p>
+<p><strong>Description:</strong><br>
+Apache Allura: stored XSS via SVN code repositories.  Git repositories are not known to be affected.  The vulnerability is likely mitigated via default CSP headers.</p>
+<p>This issue affects Apache Allura: through 1.20.0.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 1.21.0, which fixes the issue.</p>
+<p><strong>Credit:</strong><br>
+This issue was discovered by n0mi1k.</p>
+<h4>Other Changes</h4>
+<p>Repo admins can allow force push on their own git repos.  See Upgrade Instructions for how to enable.</p>
+<p>Drop support for <code>&lt;svg&gt;</code> tags in Markdown/HTML.</p>
+<p>Add mongodb option for the jinja bytecode cache.</p>
+<p>For full details of all the changes and fixes, see the <a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES">CHANGES file</a>. </p>
+<h4>Upgrade Instructions</h4>
+<p>Upgrade to prior release(s) first.  Stop any running Allura services while upgrading.</p>
+<p>Install updated dependencies by running: <code>pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed</code></p>
+<p>To allow repo admins to turn force push on and off for their own git repos, add <code>scm.force_push.git.enabled = true</code> to your .ini file and run in the Allura dir (replace your .ini file path):
+  <code>paster script your-ini-file.ini ../scripts/migrations/force-push-sync-from-repo-config.py</code>
+The script reads each git repo's settings and records it in Mongo so the admin page shows the right value.  It does not change any repository.</p>
+<p>Feel free to ask any questions on the <a href="https://lists.apache.org/list.html?dev@allura.apache.org">dev mailing list</a>.</p>
+<h4>Get 1.21.0</h4>
+<p><a href="https://allura.apache.org/download.html">Download Allura</a> and <a href="https://forge-allura.apache.org/docs/getting_started/installation.html">install it</a> today.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <div class="row">
+      <footer id="footer" class="bg-black text-white col-24">
+        <p class="copy pad-top-sm text-center">Copyright © 2026 The Apache Software Foundation, Licensed under
+            <a href="http://www.apache.org/licenses/LICENSE-2.0.html">the Apache License, Version 2.0.</a></p>
+        <p class="copy pad-bot-sm text-center">Apache, Allura, Apache Allura, and the Apache feather logo are trademarks of The Apache Software Foundation.</p>
+      </footer>
+    </div>
+  </section>
+
+  <script type="application/javascript" src="https://allura.apache.org/theme/js/jquery-1.11.2.min.js"></script>
+  <script type="application/javascript" src="https://allura.apache.org/theme/js/frontend.js"></script>
+        <script type="application/javascript" src="https://allura.apache.org/theme/js/article.js"></script>
+  <!-- Credits
+
+          Logo Design: Will Leonard
+          http://willleonard.org
+
+          Site design: Perry Merrity
+          https://perrymerrity.com/
+
+          bg-header-forge.jpg
+          Photo by: Stefan Schmitz
+          https://creativecommons.org/licenses/by-nd/2.0
+
+          bg-developers-fire.jpg
+          Photo by: Frédéric Bisson
+          https://creativecommons.org/licenses/by-nd/2.0
+      -->
+</body>
+</html>

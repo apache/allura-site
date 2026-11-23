@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="https://allura.apache.org/" rel="alternate"/><link href="https://allura.apache.org/feeds/tag.release.atom.xml" rel="self"/><id>https://allura.apache.org/</id><updated>2026-11-06T00:00:00+00:00</updated><entry><title>Apache Allura 1.22.1 released, with security fix</title><link href="https://allura.apache.org/posts/2026-allura-1.22.1.html" rel="alternate"/><published>2026-11-06T00:00:00+00:00</published><updated>2026-11-06T00:00:00+00:00</updated><author><name/></author><id>tag:allura.apache.org,2026-11-06:/posts/2026-allura-1.22.1.html</id><summary type="html">&lt;p&gt;Version 1.22.1 of Allura released, with security fix&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Allura - release</title><link href="https://allura.apache.org/" rel="alternate"/><link href="https://allura.apache.org/feeds/tag.release.atom.xml" rel="self"/><id>https://allura.apache.org/</id><updated>2026-11-23T00:00:00+00:00</updated><entry><title>Apache Allura 1.23.0 released, with security fix</title><link href="https://allura.apache.org/posts/2026-allura-1.23.0.html" rel="alternate"/><published>2026-11-23T00:00:00+00:00</published><updated>2026-11-23T00:00:00+00:00</updated><author><name/></author><id>tag:allura.apache.org,2026-11-23:/posts/2026-allura-1.23.0.html</id><summary type="html">&lt;p&gt;Version 1.23.0 of Allura released, with security fix&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
+&lt;p&gt;Apache Allura 1.23.0 has been released.&lt;/p&gt;
+&lt;h4&gt;Security Fixes&lt;/h4&gt;
+&lt;h5&gt;CVE-2026-135660: XSS in Ticket Tracker&lt;/h5&gt;
+&lt;p&gt;Severity: critical&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+XSS vulnerability in Apache Allura's ticket tracking tool.&lt;/p&gt;
+&lt;p&gt;This issue affects Apache Allura through 1.22.1.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users are recommended to upgrade to version 1.23.0, which fixes the issue.&lt;/p&gt;
+&lt;h4&gt;Other Changes&lt;/h4&gt;
+&lt;p&gt;Additional security hardening and package updates.&lt;/p&gt;
+&lt;p&gt;Python 3.15 is fully supported now.&lt;/p&gt;
+&lt;p&gt;The ForgeChat tool has been removed.&lt;/p&gt;
+&lt;p&gt;OAuth2 support for DCR (Dynamic Client Registration), CIMD (Client ID Metadata Documents), and scopes are available.
+See the new &lt;code&gt;oauth2.*&lt;/code&gt; settings in &lt;code&gt;development.ini&lt;/code&gt; for more information on how to enable and use it. &lt;/p&gt;
+&lt;p&gt;For full details of all the changes and fixes, see the &lt;a href="https://forge-allura.apache.org/p/allura/git/ci/master/tree/CHANGES"&gt;CHANGES file&lt;/a&gt;. &lt;/p&gt;
+&lt;h4&gt;Upgrade Instructions&lt;/h4&gt;
+&lt;p&gt;Upgrade to prior release(s) first.  Stop any running Allura services while upgrading.&lt;/p&gt;
+&lt;p&gt;Install updated dependencies by running: &lt;code&gt;pip install -r requirements.txt --no-deps --upgrade --upgrade-strategy=only-if-needed&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you used the ForgeChat tool previously, run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip uninstall -y ForgeChat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And in mongo, run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Check&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;many&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;there&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;are&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getSiblingDB&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;project-data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;countDocuments&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tool_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/^&lt;/span&gt;&lt;span class="n"&gt;chat&lt;/span&gt;&lt;span class="o"&gt;$/&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Then&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;them&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getSiblingDB&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;project-data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deleteMany&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tool_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/^&lt;/span&gt;&lt;span class="n"&gt;chat&lt;/span&gt;&lt;span class="o"&gt;$/&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Feel free to ask any questions on the &lt;a href="https://lists.apache.org/list.html?dev@allura.apache.org"&gt;dev mailing list&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Get 1.23.0&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://allura.apache.org/download.html"&gt;Download Allura&lt;/a&gt; and &lt;a href="https://forge-allura.apache.org/docs/getting_started/installation.html"&gt;install it&lt;/a&gt; today.&lt;/p&gt;</content><category term="release"/></entry><entry><title>Apache Allura 1.22.1 released, with security fix</title><link href="https://allura.apache.org/posts/2026-allura-1.22.1.html" rel="alternate"/><published>2026-11-06T00:00:00+00:00</published><updated>2026-11-06T00:00:00+00:00</updated><author><name/></author><id>tag:allura.apache.org,2026-11-06:/posts/2026-allura-1.22.1.html</id><summary type="html">&lt;p&gt;Version 1.22.1 of Allura released, with security fix&lt;/p&gt;</summary><content type="html">&lt;h4&gt;What's New?&lt;/h4&gt;
 &lt;p&gt;Apache Allura 1.22.1 has been released.&lt;/p&gt;
 &lt;h4&gt;Security Fixes&lt;/h4&gt;
 &lt;h5&gt;CVE-2026-118196: OAuth1 rebinding&lt;/h5&gt;
